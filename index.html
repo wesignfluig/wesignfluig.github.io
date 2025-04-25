@@ -1,6 +1,429 @@
-<html>
-    <body>
-        <p> Hello World </p>
-    </body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <!-- Meta tags Obrigatórias -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+ <!--CSS -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <link type="text/css" rel="stylesheet" href="css/fluig-style-guide.min.css" />
+ <link href="css/style.css" rel="stylesheet">
+
+ <!--Font awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+ <link rel="shortcut icon" href="imagens/Uso/topo-logo-barra.png" />
+
+ <title> Uso | Vertsign</title>
+
+</head>
+<body>
+  <header><!-- ínicio cabeçalho -->
+    <div class="navbar navbar-expand-sm">
+      <div class="container">
+        <a href="#" class="navbar-brand">
+          <img src="Imagens/Uso/topo-logo-branco.png" width="300px">
+        </a>
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="https://vertsign.com.br/contato/" class="btn btn-primary" type="submit" target="_blank">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<main>
+  <nav>
+    <ul class="nav nav-pills clearfix navegacao ml-5" role="tablist">
+      <li><a class="btn" href="instalacao.html">Instalação</a></li>
+      <li><a class="btn" href="configuracao.html">Configuração</a></li>
+      <li><a class="btn btn-primary text-black" href="index.html">Uso</a></li>
+      <li><a class="btn" href="portal-de-assinaturas.html">Portal de Assinaturas</a></li>
+      <li><a class="btn" href="suporte.html">Suporte</a></li>
+      <li><a class="btn" href="faq.html">Faq</a></li>
+    </ul>
+  </nav>
+
+  <div class="row">
+   <article  class="fixo col-md-3">
+    <div id="" class="barra-vertical sticky-top"> 
+      <ul class="topico">
+        <label class="ml-1"><strong>Quadro de status</strong></label>
+        <li class="arredondamento bg-roxo text-center"><a href="#modo-utilizacao">Modo de utilização</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#notificando-assinante">Notificando os assinantes</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#assinar-documento">Assinando documento no fluig</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#incluindo-assinante">Incluindo assinante</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#descartando-assinante">Descartando assinante</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#cancelando-documento">Cancelando um documento</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#verificando-documento">Verificando o documento assinado</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#excluindo-documento">Excluindo documento do GED</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#extraindo-relatorio">Extraindo relatório</a></li>
+        <label class="ml-1 mt-3"><strong>Portal de assinaturas</strong></label>
+        <li class="arredondamento bg-roxo text-center"><a href="#enviando-documento">Enviando documento para assinatura</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#email-notificacao">Enviando e-mail de notificação</a></li>
+        <label class="ml-1 mt-3"><strong>Cadastro assinantes</strong></label> 
+        <li class="arredondamento bg-roxo text-center"><a href="#cadastrando-assinantes">Cadastrando assinantes</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#editando-assinantes">Editando dados de um assinante</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#removendo-assinantes">Removendo um assinante</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#carregando-assinantes">Carregando todos os assinantes</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#layout-importacao">Layout de importação de assinantes</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#importando-assinantes">Importando assinantes</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#exportando-assinantes">Exportando assinantes</a></li>
+        <li class="mt-1 arredondamento bg-roxo text-center"><a href="#excluindo-assinantes">Excluindo os assinantes</a></li>
+
+      </ul>
+    </div>
+  </article>
+
+  <article class="ml-4 col-md-8">
+    <h3 id="quadrodeStatus"><strong>Quadro de status</strong></h3>
+    <!-- Card Modo utilização -->
+    <div id="modo-utilizacao" class="card-body borda-roxo arredondamento">
+      <h4>Modo de utilização</h4>
+      <p>Através do <strong>Quadro de Status</strong> é possível que o usuário visualize todos os documentos, porém, ele não poderá visualizar o conteúdo de um arquivo caso não tenha permissão no GED do fluig. Todas as regras de segurança do GED serão respeitadas no que diz respeito à visualização do conteúdo de um documento. As ações como:<strong> Notificar assinantes pendentes, Incluir novo assinante, Cancelar assinatura, Descartar assinante, Compartilhar link de assinatura </strong> só estarão disponíveis para usuários no papel <strong>admin</strong> e para o remetente do documento.</p>
+      <p>É possível realizar um filtro nos documentos exibidos no <strong>Quadro de Status</strong>.
+        Ao abrir a tela, nenhum registro será carregado. Somente após o preenchimento dos dados e a execução que serão disponibilizados os dados em tela. Pode-se realizar a busca nos documentos com os seguintes parâmetros:
+        <ul>
+         <li> <strong>Data de Envio:</strong> data em que o documento foi enviado. Por padrão, sempre trará o primeiro dia do mês corrente até a data atual de execução;</li>
+         <li><strong>Status do documento:</strong> busque apenas os documentos com o status desejado. Por padrão, tratá “Todos”, que são todos os status disponíveis;</li>
+         <li><strong>Remetente:</strong> busque documentos que um remetente específico enviou. Por padrão, trará o usuário corrente como “Remetente”;</li>
+         <li><strong>Código do documento:</strong> busque o documento pelo seu ID no GED. Se não informado, buscará todos os documentos. Por padrão, o valor será deixado em branco;</li>
+         <li> <strong>Nome do documento:</strong> busque o documento por palavras que contenham em seu nome. Se não informado, buscará todos os documentos. Por padrão, o valor será deixado em branco;</li>
+         <li><strong>Listar apenas os documentos onde minha assinatura é necessária:</strong> listará apenas os documentos onde o e-mail do usuário logado no fluig esteja presente na lista de participantes do documento, sempre respeitando os parâmetros acima mencionados.</li>
+       </ul>
+       <p>Cada aba representa um status de documento diferente. Clique na aba desejada para visualizar os documentos.</p>
+       <p>A atualização dos documentos enviados para assinatura são atualizados no <strong>Quadro de Status</strong> de duas formas:</p>
+       <ul>
+         <li>Automaticamente através de rotinas sincronizadas (por padrão, executa-se 1 vez ao dia, porém o cliente pode alterar conforme preferência);</li>
+         <li>Automaticamente através do Callback. Esse serviço fornece a atualização instantânea dos status dos assinantes e deve ser ativada na etapa de <strong>Instalação e Configuração</strong>.</li>
+       </ul>
+       <p>No <strong>Quadro de Status</strong> também é possível visualizar o status da assinatura de cada assinante. A exibição dos status estarão disponíveis caso o Serviço Callback esteja ativo.</p>
+       <p>Após filtrar os documentos, na aba “Pendente”, na coluna “Assinantes”, ao clicar no número de assinantes, é possível realizar as seguintes ações no documento:</p>
+       <ul>
+         <li><strong>Notificar assinantes pendentes:</strong> Permite reenviar o e-mail de assinatura para os assinantes que ainda estão pendentes.</li>
+         <li><strong>Assinar documento:</strong> Caso o e-mail do usuário logado no fluig seja o mesmo que um dos assinantes, é possível realizar a assinatura clicando nesse botão.</li>
+         <li><strong>Incluir novo assinante:</strong> Permite adicionar mais assinantes no fluxo de assinatura do documento.</li>
+         <li><strong>Cancelar assinatura:</strong> Permite cancelar a assinatura do documento. Também é possível cancelar através da widget Portal de Assinaturas</li>
+       </ul>
+       <p>Também existem ações que podem ser tomadas para cada assinante:</p>
+       <ul>
+         <li><strong>Compartilhar link de assinatura:</strong> Permite compartilhar o link de assinatura do signatário.</li>
+         <li><strong>Descartar assinante:</strong> Permite remover o assinante do fluxo de assinatura do documento.</li>
+         <li><strong>Motivo:</strong> Caso o assinante tenha rejeitado o documento, é possível visualizar o seu motivo de rejeição.</li>
+       </ul>
+       <p>É possível visualizar o status de assinatura de um documento enviado diretamente pelo GED do Fluig.  Para isso, acesse as propriedades do documento enviado.
+        Na aba “Informações Gerais”, na seção “Campo Customizado”, é possível visualizar o status do documento: “Enviando para assinatura”, “Pendente Assinatura”, “Assinado” e “Rejeitado”.
+      </p>
+      <img src="Imagens/Uso/quadro-de-status.png">
+      <br>
+      <img src="Imagens/Uso/quadro-de-status-1.png">
+      <br>
+      <img src="Imagens/Uso/quadro-de-status-2.png">
+    </div>
+   <!-- Fim card modo Utilização -->
+   <br>
+   <!-- Card Notificando os assinantes pendente de assinatura -->
+    <div id="notificando-assinante" class="card-body borda-roxo arredondamento">
+    <h4 >Notificando os assinantes pendente de assinatura</h4>
+    <p>Os documentos enviados para assinatura podem acabar sendo esquecidos devido à rotina dos participantes. Para enviar um lembrete de assinatura do documento, realize o procedimento abaixo.</p>
+    <ul>
+      <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna <strong>Assinantes</strong>, clique no número de assinantes.</li>
+      <li>Clique em <strong>Notificar assinantes pendente</strong> e aguarde a mensagem de conclusão.</li>
+    </ul>
+    <img src="Imagens/Uso/quadro-de-status-notificando-1.png">
+    </div>
+  <!-- Fim card Notificando os assinantes pendente de assinatura -->
+ <br>
+ <!-- Card Assinar documento diretamente pelo fluig -->
+   <div id="assinar-documento" class="card-body borda-roxo arredondamento">
+    <h4>Assinar documento no fluig</h4>
+    <p>O participante pode assinar o documento diretamente pelo fluig. Ao selecionar essa opção, abrirá uma nova página do navegador em que redireciona para o Portal de Assinaturas, onde o participante realizará a assinatura. Essa opção só está disponível se o e-mail do usuário logado no fluig for igual ao e-mail de um dos participantes. Para isso, realize o procedimento abaixo.</p>
+    <ul>
+      <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna Assinantes, clique no número de assinantes.</li>
+      <li>Clique em <strong>Assinar documento</strong> e abrirá uma nova janela no navegador para assinatura do documento.</li>
+    </ul>
+    <img src="Imagens/Uso/quadro-de-status-assinando-1.png">
+    </div>
+<!-- Fim card Assinar documento diretamente pelo fluig -->
+<br>
+<!-- Card Incluindo assinante -->
+<div id="incluindo-assinante" class="card-body borda-roxo arredondamento">
+  <h4>Incluindo assinante</h4>
+  <p>Após o documento ter sido enviado para assinatura, pode ser necessário incluir novos participantes no fluxo de assinatura. Para isso, realize o procedimento abaixo.</p>
+  <ul>
+    <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna Assinantes, clique no número de assinantes.</li>
+    <li>Clique em <strong>Incluir novo assinante</strong> para informar quais participantes serão incluídos no fluxo de assinatura do documento. Após selecionar os usuários desejados, clique em <strong>Concluir</strong>. Após todos os participantes terem sido informados, clique em <strong>Enviar</strong>.</li>
+  </ul>
+  <img src="Imagens/Uso/quadro-de-status-incluindo.png">
+  <br>
+  <img src="Imagens/Uso/quadro-de-status-incluindo-2.png">
+  <br>
+  <img src="Imagens/Uso/quadro-de-status-incluindo-3.png">
+  <br>
+  <img src="Imagens/Uso/quadro-de-status-incluindo-4.png">
+</div>                    
+<!-- Fim card Incluindo assinante -->
+<br>
+<!-- Card  Descartando assinante-->
+<div id="descartando-assinante" class="card-body borda-roxo arredondamento">
+  <h4>Descartando assinante</h4>
+  <p>Após o documento ter sido enviado, pode ser necessário descartar a participação de um participante do documento. Para isso, realize o procedimento abaixo.</p>
+  <ul>
+    <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna <strong>Assinantes</strong>, clique no número de assinantes.</li>
+    <li>Localize o assinante desejado e na coluna <strong>Ações do assinante</strong>, clique no botão.</li>
+    <li>Selecione a opção <strong>Descartar assinante</strong> e aguarde a mensagem de conclusão.</li>
+  </ul>
+  <img src="Imagens/Uso/quadro-de-status-descartando-1.png">
+  <br>
+  <img src="Imagens/Uso/quadro-de-status-descartando-2.png">
+</div><!-- Fim card  Descartando assinante-->
+<br>
+<!-- Card  Cancelando um documento-->
+<div id="cancelando-documento" class="card-body borda-roxo arredondamento">
+  <h4 >Cancelando um documento</h4>
+  <p>Para cancelar um documento, primeiramente ele deve ter sido enviado para assinatura. Após o cancelamento, o documento será excluído do portal.</p>
+  <p>O usuário será notificado por e-mail informando que o documento foi excluído conforme o exemplo abaixo.</p>
+  <p>Documentos cancelados e rejeitados podem ser reenviados para assinatura.</p>
+  <p>Para cancelar um documento, realize o procedimento abaixo.</p>
+  <ul>
+    <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna <strong>Assinantes</strong>, clique no número de assinantes.</li>
+    <li>Selecione a opção <strong>Cancelar Assinatura</strong> e aguarde a mensagem de conclusão.</li>
+  </ul>
+  <img src="Imagens/Uso/quadro-de-status-cancelando-1.png">
+  <br>
+  <img src="Imagens/Uso/quadro-de-status-cancelando-2.png">
+  <br>
+  <img src="Imagens/Uso/quadro-de-status-cancelando-3.png">
+</div><!-- Fim card  Cancelando um documento-->
+<br>
+<!-- Card  Verificando o manifesto do documento assinado-->
+<div id="verificando-documento" class="card-body borda-roxo arredondamento">
+  <h4>Verificando documento assinado</h4>
+  <p>O manifesto é um documento eletrônico retornado para o fluig após o documento ter sido assinado. Nele, contém informações sobre quem assinou, data de assinatura e qual a forma de assinatura utilizada, além de recolher outras evidências, como geolocalização, imagem da assinatura eletrônica.</p>
+  <p>Após o documento ser assinado, deve-se aguardar a execução da rotina que permite baixar os documentos assinados do Portal da Vertsign. Caso o serviço Callback esteja ativo, ele será responsável por realizar o download automático quando o documento for assinado.</p>
+  <p>Caso não possua o Callback ativo na base, existem rotinas agendadas que verificam o status do documento no Portal de Assinaturas e geram seu manifesto. Por padrão, essa rotina é executada uma vez por dia, mas pode-se alterar conforme a preferência.</p>
+  <p>Acesse o tópico <strong>Rotinas de integração</strong> para mais informações sobre o agendamento.</p>
+  <p>Em seguida, o manifesto será inserido como anexo no documento original no GED do fluig. Podem ocorrer casos em que ele não se encontre como anexo do documento original, mas esteja na mesma pasta do documento original. Nesse caso, basta baixar o documento em sua máquina e anexar no documento original. Para verificar o manifesto, realize o procedimento abaixo.</p>
+  <ul>
+    <li>Realize a busca do documento e o localize na aba <strong>Assinado;</strong></li>
+    <li>Após localizar o documento, na coluna <strong>Código</strong>, clique no <strong>código do documento no GED do fluig</strong>;</li>
+    <li>Você será redirecionado para o documento;</li>
+    <li>Localize no canto superior direito a opção <strong>Ações do Documento > Ver anexos</strong>;</li>
+    <li>Clique no nome do manifesto para baixá-lo em seu computador;</li>
+    <li>Após baixar, basta extrair o arquivo e terá todas as evidências.</li>
+  </ul>
+</div><!-- Fim card  Verificando o manifesto do documento assinado-->
+<br>
+<!-- Card Excluindo um documento do GED do Fluig -->
+<div id="excluindo-documento" class="card-body borda-roxo arredondamento">
+  <h4>Excluindo documento do GED</h4>
+  <p>Caso um documento que esteja com status <strong>Enviando para assinatura</strong> seja excluído do GED do fluig, a rotina de envio para assinatura irá detectar a exclusão do mesmo e interromper o processo de envio para o Portal de Assinaturas Vertsign.</p>
+  <p>Se o documento estiver com status <strong>Pendente Assinatura</strong>, a rotina de retorno do documento assinado irá detectar a exclusão do documento original no GED do Fluig e deletar o documento no Portal de Assinaturas Vertsign.</p>
+  <p>Se o documento já foi assinado, mas o mesmo foi excluído do GED do fluig, o manifesto será direcionado para a pasta <strong>Excluídos</strong>. Por exemplo, um documento qualquer é enviado para assinatura, ele é assinado, mas ao retornar o manifesto para o fluig percebe-se que o documento original foi excluído no GED. Dessa forma não será possível anexar o manifesto. Então o manifesto será criado na pasta <strong>Excluídos</strong> junto com o documento original.</p>
+  <p>Se o documento já foi assinado, mas o mesmo foi excluído do GED do fluig, o manifesto será direcionado para a pasta Excluídos. Por exemplo, um documento qualquer é enviado para assinatura, ele é assinado, mas ao retornar o manifesto para o fluig percebe-se que o documento original foi excluído no GED. Dessa forma não será possível anexar o manifesto. Então o manifesto será criado na pasta <strong>Excluídos</strong> junto com o documento original.</p>
+</div>
+<!-- Fim card Excluindo um documento do GED do Fluig  -->
+<br>
+<!-- Card  EXTRAINDO RELATÓRIO (somente administradores)-->
+<div id="extraindo-relatorio" class="card-body borda-roxo arredondamento">
+  <h4 >Extraindo relatório</h4>
+  <p>Para extrair uma planilha do Excel com os dados do documento, realize o procedimento abaixo.</p>
+  <ul>
+    <li>Realize a busca dos documentos, informando os filtros desejados;</li>
+    <li>Na primeira aba, onde fica o gráfico geral de documentos, localize a opção <strong> Mais ações > Exportar</strong>;</li>
+    <li>Será gerado uma planilha Excel com dados básicos para gerenciar as informações.</li>
+  </ul>
+</div>
+<!-- Fim card  EXTRAINDO RELATÓRIO (somente administradores)-->
+<br>
+<h3><strong>Portal de Assinaturas</strong></h3>
+<!-- Card ENVIANDO DOCUMENTO PARA ASSINATURA -->
+<div id="enviando-documento" class="card-body borda-roxo arredondamento">
+  <h4>Enviando documento para assinatura</h4>
+  <p>Para enviar um documento para assinatura acesse a página Portal de Assinaturas no fluig.
+  Selecionar o documento e escolher uma das duas opções disponíveis. Ambas as opções irão disponibilizar toda a estrutura atual do GED que o usuário possui permissão, sendo comportamento nativo da plataforma fluig. Os formatos de documentos suportados para envio são: </p>
+  <ul>
+   <li>.docx</li>
+   <li>.doc</li>
+   <li>.pdf</li>
+   <li>.xls</li>
+ </ul>
+ <p>Os documentos enviados para assinatura devem ter tamanho máximo de <strong>10MB</strong>.</p>
+ <p>AVISO - Não selecione/publique documento em uma pasta que esteja restrita ao papel de ‘admin’ do fluig. Caso isso seja feito, o documento não será enviado pois não será possível ler o conteúdo do arquivo.</p>
+ <p> Opções disponíveis:</p>
+ <ul>
+   <li><strong>Selecionar documento do GED:</strong> selecione um documento que já está publicado no GED da plataforma fluig. Após localizar o documento, basta clicar na caixa de seleção ao lado do nome do documento e depois clicar em <strong>Selecionar</strong>;</li>
+   <li><strong>Selecionar documento do computador:</strong> selecione um documento que esteja em seu computador e posteriormente, selecione a pasta do GED onde esse documento será publicado automaticamente. Após localizar o documento, basta clicar na caixa de seleção ao lado do nome do documento e depois clicar em <strong>Selecionar</strong>.</li>
+ </ul>
+ <p>Após selecionado o documento, informe os assinantes. Para isso, clique no botão Adicionar Assinante.</p>
+ <p>Na tela seguinte, informe os dados do assinante do documento. Os assinantes incluídos não serão cadastrados na base de dados e não é necessário cadastrar um assinante para incluir no fluxo de assinaturas. Os dados abaixo devem ser preenchidos. </p>
+ <ul>
+   <li><strong>Selecione o assinante:</strong> selecione assinantes já cadastrados na página <strong>Cadastro de Assinantes</strong>. Após selecionado, seus dados serão preenchidos automaticamente nos respectivos campos;</li>
+   <li><strong>Etapa (obrigatório):</strong> informe a etapa que o assinante deve assinar. Se não existir ordem de assinatura, então, por padrão, deixe a etapa como “1”. Caso exista ordem para assinaturas, informe a etapa que o assinante deve assinar. Por exemplo, o “Assinante 1” deve assinar antes do “Assinante 2” e “Assinante 3”, então o “Assinante 1” ficará na etapa 1, e o “Assinante 2” e “Assinante 3” ficarão na etapa 2. Caso seja necessário adicionar mais etapas, basta clicar no botão “Incluir nova etapa”;</li>
+   <li><strong>E-mail (obrigatório):</strong> e-mail do assinante que receberá o link de assinatura e notificações de conclusão do processo de assinatura;</li>
+   <li><strong>CPF (opcional):</strong> CPF do assinante;</li>
+   <li><strong>Título (opcional):</strong> nomenclatura opcional utilizada para identificar o assinante no processo de assinaturas e no manifesto, por exemplo, “Cliente”, “Representante da empresa X”, “Diretor Financeiro”, “Gerente”, etc.</li>
+   <li><strong>Tipo de Assinatura (obrigatório):</strong> escolher o tipo de assinatura que o assinante utilizará no fluxo de assinaturas. Veja o detalhamento de cada opção aqui [redirecionar para o cadastro de assinantes].</li>
+ </ul>
+ <p>Informado os dados, basta clicar em <strong>Concluir</strong>(botão verde). Adicione o número desejado de assinantes, sempre respeitando os tipos de documentos que foram contratados pela empresa. Por padrão, são 10 assinantes para um documento de até 10 mb. Após adicionar todos assinantes, basta clicar em <strong>Concluir</strong> (botão preto) no fim da tela para adicionar os assinantes ao documento.</p>
+ <p>Verifique se está tudo correto e se sim, basta clicar no botão <strong>Enviar</strong> (ícone azul).</p>
+ <p>Após o documento ser enviado para assinatura, todos os participantes relacionados no documento receberão um e-mail de notificação de conclusão assim que o documento for completamente assinado, ou seja, quando não houver mais assinaturas pendentes.</p>
+ <p>Sempre verifique no Quadro de Status se o documento foi realmente enviado, pois podem ocorrer erros durante o envio e os mesmos deverão ser corrigidos.</p>
+ <h4>Observação</h4>
+ <br>
+ <p>O documento encaminhado para assinatura a partir do fluig é enviado para o Portal de Assinaturas Vertsign onde o mesmo será assinado.</p>
+ <p>Caso o alerta do navegador seja exibido no processo de envio do(s) documento(s), clique em <strong>Aguarde</strong>. Normalmente essa mensagem é exibida quando documentos pesados ou vários documentos estão sendo enviados ao mesmo tempo.</p>
+ <img src="Imagens/Uso/portal-de-assinaturas-enviando-1.png">
+ <br>
+ <img src="Imagens/Uso/portal-de-assinaturas-enviando-2.png">
+ <br>
+ <img src="Imagens/Uso/portal-de-assinaturas-enviando-3.png">
+ <br>
+ <img src="Imagens/Uso/portal-de-assinaturas-enviando-4.png">
+ <br>
+ <img src="Imagens/Uso/portal-de-assinaturas-enviando-5.png">
+ <br>
+ <img src="Imagens/Uso/portal-de-assinaturas-enviando-6.png">
+ <br>
+ <img src="Imagens/Uso/portal-de-assinaturas-enviando-7.png">                        
+</div><!-- Card fim ENVIANDO DOCUMENTO PARA ASSINATURA -->
+<br>
+<!-- Card  E-MAIL DE NOTIFICAÇÃO-->
+<div id="email-notificacao" class="card-body borda-roxo arredondamento">
+  <h4 >Email de notificação</h4>
+  <p>Após o envio do documento para assinatura, os assinantes receberão um e-mail do Portal de Assinaturas da Vertsign informando que a assinatura do documento está pendente.</p>
+  <p>A imagem abaixo é um exemplo do formato do e-mail recebido por um assinante:</p>
+  <img src="Imagens/Uso/portal-de-assinaturas-notificação-1.png">
+  <p>Agora basta clicar no link do documento para ser redirecionado para a página do Portal de Assinaturas e ter acesso ao conteúdo do documento e assinatura.</p>
+  <p>O layout pode variar conforme a evolução da plataforma de assinaturas, porém sempre seguirá o padrão de dados, com o nome do remetente, nome da empresa, nome do documento, link para assinatura.</p>                         
+</div><!-- Card fim E-MAIL DE NOTIFICAÇÃO -->
+<br>
+<h3><strong>Cadastro de assinantes</strong></h3>
+
+<!-- Card Cadastrando assinantes -->
+<div id="cadastrando-assinantes" class="card-body borda-roxo arredondamento">
+  <h4>Cadastrando assinantes</h4>
+  <p>Durante o envio de documentos para assinatura, é comum termos participantes que são frequentemente relacionados em diversos documentos. Para não termos que digitar seus dados toda vez que realizamos um novo envio de documento, podemos cadastrar seus dados na base, facilitando o envio de documentos.</p>
+  <p>Para iniciar um cadastro, basta clicar no botão <strong>Adicionar</strong>.</p>
+  <p>Para assinantes que frequentemente são incluídos nos fluxos de assinaturas de documentos é interessante deixar seus dados salvos na base de dados do fluig, para evitar de digitarmos seus dados a cada envio de documento para assinatura. </p>
+  <p>Não é obrigatório o cadastro para adicionar um assinante no fluxo.</p>
+  <p>Os dados utilizados são:</p>
+  <ul>
+   <li><strong>Nome (obrigatório):</strong> nome do assinante;</li>
+   <li><strong>E-mail (obrigatório):</strong> e-mail do assinante que receberá o link de assinatura e notificações de conclusão do processo de assinatura;</li>
+   <li><strong>CPF (obrigatório):</strong> CPF do assinante;</li>
+   <li><strong>Título (opcional):</strong> nomenclatura opcional utilizada para identificar o assinante no processo de assinaturas e no manifesto, por exemplo, “Cliente”, “Representante da empresa X”, “Diretor Financeiro”, “Gerente”, etc.</li>
+   <li><strong>Empresa (opcional):</strong> para facilitar a identificação do assinante no fluig, pode-se informar o nome da empresa que o assinante pertence. Esse dado não é utilizado na assinatura do documento e não é integrado com o Portal de Assinaturas, servindo apenas de identificador no fluig;</li>
+   <li><strong>Tipo de Assinatura (obrigatório) :</strong> escolher o tipo de assinatura que o assinante utilizará no fluxo de assinaturas. Abaixo, mais detalhes sobre as opções disponíveis:</li>
+ </ul>
+ <h5>Assinatura digital</h5>
+ <p>A assinatura digital utiliza um Certificado Digital ICP Brasil para comprovar a autoria da assinatura. A assinatura digital garante autenticidade, integridade e não repúdio (signatário não tem como negar sua autoria). O Certificado Digital é a identidade digital da pessoa física e jurídica no meio eletrônico. É validado presencialmente, não permitindo fraudes. Se você necessita mandar documentos para fora de sua rede, é fundamental que haja confiança pública para que a assinatura seja automaticamente aceita pelos diferentes órgãos e empresas. Nesse caso, a assinatura digital é mais conveniente, pois possui a mesma validade jurídica de um documento com firma reconhecida em cartório.</p>
+ <h5>Assinatura eletrônica</h5>
+ <p>A assinatura eletrônica coleta evidências para comprovar a autoria da assinatura em um documento e não utiliza um Certificado Digital. Estas evidências são coletadas no momento da assinatura. O Portal coleta três principais: a grafia do signatário (com uma caneta touch, dedo, mouse ou a imagem digitalizada), IP da máquina e geolocalização. A assinatura eletrônica viabiliza a migração de ações do dia a dia da empresa do meio físico para o digital, reduzindo custos operacionais e poupando tempo. Se você necessita apenas deixar de usar papel e agilizar os processos, então conformidade e confiança não devem ser um problema, e a assinatura eletrônica pode ser considerada.</p>
+ <h5>Observador</h5>
+ <p>É um participante do fluxo sem nenhuma ação no mesmo, ou seja, não irá assinar. O usuário receberá notificações sobre o documento e terá permissão para visualiza-lo.</p>
+ <h5>Autorizador</h5>
+ <p>O usuário autorizador terá a opção de negar ou autorizar um documento, sendo assim, possui uma ação e o documento só é finalizado após todos os participantes finalizarem suas ações. Caso o autorizador negue, o documento é bloqueado só sendo permitido desbloquear com um usuário administrador ou remetente.</p>
+ <img src="Imagens/Uso/cadastro-de-assinantes-cadastrando-1.png">
+ <br>
+ <img src="Imagens/Uso/cadastro-de-assinantes-cadastrando-2.png">                        
+</div><!-- Card fim Cadastrando assinantes -->
+<br>
+<!-- Card Ediatando dados de um assinante -->
+<div id="editando-assinantes" class="card-body borda-roxo arredondamento">
+  <h4 >Editando dados de um assinante </h4>
+  <p>Ao acessar a página Cadastro de Assinantes, localize o registro do assinante ou utilize o campo de busca para localizar seu registro.</p>
+  <p>Após localizar, basta clicar no registro e depois Editar.</p>
+  <p>Feito isso, será liberado os campos disponíveis para alteração e após a conclusão, basta clicar em Salvar na mesma linha que salvará os dados.</p>
+  <p>Campos disponíveis para alteração no Cadastro de Assinantes.</p>
+  <img src="Imagens/Uso/cadastro-de-assinantes-editando-1.png">                  
+</div><!-- Card fim  Ediatando dados de um assinante-->
+<br>
+<!-- Card Remover um assinante -->
+<div id="removendo-assinantes" class="card-body borda-roxo arredondamento">
+  <h4>Remover um assinantes</h4>
+  <p>Ao acessar a página <strong>Cadastro de Assinantes</strong>, localize o registro do assinante ou utilize o campo de busca para localizar seu registro.</p>
+  <p>Após localizar, basta clicar no registro e depois no botão <strong>Remover</strong>.</p>                      
+</div><!-- Card fim Remover um assinante --> 
+<br>
+<!-- Card  Carregando todos os assinantes-->
+<div id="carregando-assinantes" class="card-body borda-roxo arredondamento">
+  <h4>Carregando todos os assinantes</h4>
+  <p>Por questões de performance, a página carrega apenas os 100 primeiros assinantes cadastrados na base, sem critério de seleção dos registros. Para visualizar todos os registros, é necessário que o usuário opte por utilizar a opção <strong>Carregar todos assinantes</strong>. Será exibida uma mensagem onde o usuário precisará confirmar que deseja realizar o processo e, após confirmado, todos os assinantes serão carregados em tela. Dependendo do número de registros na base de dados, o processo pode levar minutos para ser concluído.</p>
+  <img src="Imagens/Uso/cadastro-de-assinantes-carregando-1.png">                        
+</div><!-- Card fim Carregando todos os assinantes -->      
+<br>
+<!-- Card  GERANDO LAYOUT DE IMPORTAÇÃO DE ASSINANTES (SOMENTE ADMINISTRADORES)-->
+<div id="layout-importacao" class="card-body borda-roxo arredondamento">
+  <h4>Layout de importação de assinantes</h4>
+  <p>Para gerar o layout da planilha no formato .CSV que deve ser utilizado para importação de assinantes. Basta o usuário selecionar a opção <strong>Mais ações > Gerar layout de importação de assinantes</strong>.</p>                           
+</div><!-- Card fim  GERAndo LAYOUT DE IMPORTAÇÃO DE ASSINANTES (SOMENTE ADMINISTRADORES)-->   
+<br>
+<!-- Card  Importando assinantes(apenas administradores)-->
+<div id="importando-assinantes" class="card-body borda-roxo arredondamento">
+  <h4>Importando assinantes</h4>
+  <p>Para facilitar o cadastro de assinantes, a opção <strong>Importar Assinantes</strong> permite ao usuário informar uma planilha no formato .CSV para criação dos assinantes. Basta o usuário selecionar a opção <strong>Mais ações > Gerar layout de importação de assinantes</strong> e preencher as informações para cadastro.</p>
+  <p>A importação de assinantes que possuam inconsistências em seus dados (e-mail inválido, CPF inválido ou duplicado, tipo de assinatura diferente do padrão aceito) serão descartados e não serão importados. </p>
+  <p>Assinantes já existentes não terão seus dados atualizados.</p>
+  <p>Preenchimento das informações.</p>
+  <ul>
+   <li><strong>Nome (obrigatório):</strong> Nome do assinante;</li>
+   <li><strong>E-mail (obrigatório):</strong> E-mail do assinante;</li>
+   <li><strong>CPF (obrigatório):</strong> número do CPF com pontuação;</li>
+   <li><strong>Tipo de Assinatura (obrigatório):</strong> D = Digital; E = Eletrônica;</li>
+   <li><strong>Título (opcional):</strong> título que será utilizado pelo assinante;</li>
+   <li><strong>Empresa (opcional):</strong> empresa do assinante.</li>
+ </ul>                            
+</div><!-- Card fim  Importando assinantes(apenas administradores)--> 
+<br>
+<!-- Card Exporta assinantes -->
+<div id="exporta-assinantes" class="card-body borda-roxo arredondamento">
+ <h4>Exportando assinantes</h4>
+ <p>Exportar os assinantes cadastrados na base do fluig para a planilha no formato .CSV. Selecionar a opção <strong>Mais ações > Exportar assinantes</strong>.</p>                            
+</div><!-- Card fim Exporta assinantes --> 
+<br>
+<!-- Card Excluindo todos os assinantes -->
+<div id="excluindo-assinantes" class="card-body borda-roxo arredondamento">
+ <h4>Excluindo assinantes</h4>
+ <p>Exclui o cadastro de todos assinantes existentes na base do fluig. Basta o usuário selecionar a opção <strong>Mais ações > Excluir todos</strong>.</p>                             
+</div><!-- Card fim Excluindo todos os assinantes --> 
+<br>  
+</article>
+</div>
+<footer>
+  <div class="footer-blurb">
+    <div class="small-print">
+      <div class="container">
+        <small>
+          <strong>Certisign:</strong>
+          <a class="link-default" target="_blank"
+          href="https://vertsign.portaldeassinaturas.com.br/Info/TermosDeUso">Termos de Uso</a> |
+          <a class="link-default" target="_blank"
+          href="https://vertsign.portaldeassinaturas.com.br/Info/PoliticaPrivacidade">Política de
+        Privacidade</a>
+      </small>
+      <br>
+      <small>
+        <strong>Vertsign:</strong>
+        <a class="link-default" href="./termos.html">Termos &amp; Condições</a> |
+        <a class="link-default" href="./politica.html">Política de Privacidade</a>
+      </small>
+      <br>  
+      <small>Avenida Dr. Cardoso de Melo, 1.460 | 8º andar | Cj. 82</small>
+      <small>Vila Olímpia, São Paulo | Brasil | CEP: 04548-005</small>
+    </div>
+  </div>
+</div>
+</footer>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
