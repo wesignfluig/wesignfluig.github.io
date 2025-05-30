@@ -8,11 +8,17 @@
 
       <!--CSS -->
       <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/headers.css" rel="stylesheet">
-      <link href="css/dashboard.css" rel="stylesheet">
-      <link href="css/sidebars.css" rel="stylesheet">
-      <link href="css/custom.css" rel="stylesheet">
       
+      <link href="css/headers.css" rel="stylesheet">
+      
+      
+      <link href="css/dashboard.css" rel="stylesheet">
+      
+      <!--
+      <link href="css/sidebars.css" rel="stylesheet">
+      -->
+      
+      <link href="css/custom.css" rel="stylesheet">
 
       <script src="js/bootstrap.bundle.min.js"></script>
       
@@ -83,7 +89,8 @@
                
                <div class="row d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                   <div id="formularios">                     
-                        <h4> Formulários</h4>
+                        <h1> Formulários</h1>
+                        <hr>
                         <p>Durante a instalação, será criada uma pasta chamada <strong>Vertsign</strong> dentro da pasta raiz do fluig. Essa pasta servirá para armazenar os formulários e todas as informações do Vertsign.</p>
 
                         <p>Os formulários serão instalados para realizar o <i>Cadastro de Assinantes, Cadastro de Parâmetros Gerais do App</i> e <i>Formulário para Auxiliar</i> no envio e retorno de documentos enviados para assinatura.</p>
@@ -109,7 +116,8 @@
 
                <div class="row">
                   <div id="datasets">
-                     <h4> Datasets </h4>
+                        <h1> Datasets</h1>
+                        <hr>
                         <p>Esta etapa é responsável por realizar a instalação dos datasets que farão a integração entre
                            o fluig e a Certisign.
                         </p>
@@ -155,26 +163,27 @@
                               manifesto após anexar ao documento original.
                            </li>
                      </ul>
-                        <p>Após a instalação, os datasets marcados como "Sincronizado" serão criados no "Agendador de
-                           tarefas" do fluig.
-                           Por padrão serão executados uma ver por dia, podendo ser alterado. Para
-                           visualizar os
-                           datasets no "Agendador de
-                           tarefas", basta acessar: <strong>Painel de Controle > Parâmetros Técnicos > Agendador de tarefas</strong>
-                        </p>
-            
-                        <i> Página "Instalação e Configuração" demonstrando datasets instalados  </i>
-                        <img src="Imagens/Instalação/wizard-dataset1.png" class="img-fluid" alt="Wizard Dataset">
-            
-                        <br> <br>
-                        <i> Datasets sincronizados no "Painel de Controle" do fluig  </i>
-                        <img src="Imagens/Instalação/wizard-dataset2.png" class="img-fluid" alt="Wizard Dataset">
+                     <p>Após a instalação, os datasets marcados como "Sincronizado" serão criados no "Agendador de
+                        tarefas" do fluig.
+                        Por padrão serão executados uma ver por dia, podendo ser alterado. Para
+                        visualizar os
+                        datasets no "Agendador de
+                        tarefas", basta acessar: <strong>Painel de Controle > Parâmetros Técnicos > Agendador de tarefas</strong>
+                     </p>
+         
+                     <i> Página "Instalação e Configuração" demonstrando datasets instalados  </i>
+                     <img src="Imagens/Instalação/wizard-dataset1.png" class="img-fluid" alt="Wizard Dataset">
+         
+                     <br> <br>
+                     <i> Datasets sincronizados no "Painel de Controle" do fluig  </i>
+                     <img src="Imagens/Instalação/wizard-dataset2.png" class="img-fluid" alt="Wizard Dataset">
                   </div>
                </div>
                
                <div class="row">
                   <div id="servicos" class="card-body borda-roxo arredondamento">
-                        <h4> Serviços</h4>
+                        <h1> Serviços</h1>
+                        <hr>
                         <p>Nesta etapa será realizada a instalação dos serviços utilizados pelo App:</p>
                         <ul>
                            <li><strong>ECMCardService_Vertsign</strong>: Webservice responsável por realizar
@@ -204,17 +213,18 @@
                            </li>
                      </ul>
                      <p>Feita a instalação dos serviços, eles poderão ser encontrados em:
-                        <strong>Painel de Controle > Desenvolvimento > Serviços</strong></p>
-                        <img src="Imagens/Instalação/wizard-service1.png" class="img-fluid" alt="Wizard Serviço">
-                        
-                        <img src="Imagens/Instalação/wizard-service2.png" class="img-fluid" alt="Wizard Serviço">
+                     <strong>Painel de Controle > Desenvolvimento > Serviços</strong></p>
+                     <img src="Imagens/Instalação/wizard-service1.png" class="img-fluid" alt="Wizard Serviço">
+                     
+                     <img src="Imagens/Instalação/wizard-service2.png" class="img-fluid" alt="Wizard Serviço">
                   </div>
                </div>
                
                <div class="row">
                   <div id="campo-customizado" >
                      <div class="card-body borda-roxo arredondamento">
-                        <h4>Campo customizado</h4>
+                        <h1> Campo customizado</h1>
+                        <hr>
                         <p>Nesta etapa da instalação será instalado o campo customizado que é atualizado a cada
                            alteração de status do documento enviado para assinatura.
                         </p>
@@ -254,7 +264,8 @@
                
                <div class="row">
                   <div id="atualizacao" class="card-body borda-roxo arredondamento">
-                     <h4>Atualização</h4>
+                     <h1> Atualização</h1>
+                     <hr>
                      <p>A atualização dos formulários e dos datasets é feita pela widget <strong>Instalação e
                         Configuração</strong>.
                      </p>
