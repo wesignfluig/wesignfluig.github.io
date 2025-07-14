@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <!-- Meta tags Obrigatórias -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!--CSS -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/headers.css" rel="stylesheet">
+   <link href="css/dashboard.css" rel="stylesheet">
+
+   <!--
+      <link href="css/sidebars.css" rel="stylesheet">
+      -->
+
+   <link href="css/custom.css" rel="stylesheet">
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script defer src="js/sidebars.js"></script>
+   <script src="js/main.js"></script>
+   <title> Manual Wesign </title>
+</head>
+
+
+
+<body>
+   <header class="navbar sticky-top flex-md-nowrap p-0 shadow d-flex justify-content-center py-3 bg-white">
+      <ul class="nav nav-pills">
+         <li class="nav-item"><a href="instalacao.html" class="nav-link" aria-current="page">Instalação</a></li>
+         <li class="nav-item"><a href="configuracao.html" class="nav-link">Configuração</a></li>
+         <li class="nav-item"><a href="index.html" class="nav-link">Utilização</a></li>
+         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+         <li class="nav-item"><a href="release-notes.html" class="nav-link active">Release Notes</a></li>
+      </ul>
+   </header>
+
+   <div class="container-fluid">
+      <div class="row">
+         <div class="sidebar flex-md-nowrap border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
+            <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
+               aria-labelledby="sidebarMenuLabel">
+               <div class="offcanvas-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+                     aria-label="Close"></button>
+               </div>
+
+               <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
+                  <ul class="nav flex-column">
+                     <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page"
+                           href="#v32">
+                           Versão 3.2 <span class="badge text-bg-success">Versão atual</span>
+                        </a>
+                     </li>                     
+                  </ul>
+               </div>
+            </div>
+         </div>
+
+         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 clearfix">
+
+            <section id="v32">
+
+               <div class="card mb-3">
+                  <div class="card-header">
+                     <h4> Versão 3.2 <span class="badge text-bg-success">Versão atual</span>   
+                     </h4> 
+                  </div>
+                  <div class="card-body">
+                     <article>
+                        <p class="card-text"> Foram adicionadas novas funcionalidades no envio de documentos além de correções minoritárias em mensagens utilizadas no app.</p>
+
+                        <h3> <u> Cadastro de Assinantes </u></h3>
+                        <ul>
+                           <li>
+                              <p><strong>Informar número de celular do assinante</strong></p>                              
+                           </li>
+                        </ul>
+                        <p>Criação de novo campo <strong>Celular</strong> para armazenar o número de celular do assinante. O número deve ser informado no <strong>padrão internacional</strong>, incluindo o código do país e o número do celular.</p>
+                        <p>Cada país adota seu próprio padrão de número de celular, então verifique com o remetente antes de seu cadastro. </p>
+                        <p>O número de celular será utilizado no envio do documento quando o remetente optar por utilizar um tipo de autenticação (nova funcionalidade descrita em Portal de Assinaturas) que utilize o número de celular.  </p>
+                        <p><b>Exemplo</b></p>   
+                        <p>Para um número de celular de São Paulo, deve ser informado 5511999999999, onde:</p>
+                        <ul>
+                           <li><b>55</b>: código do país;</li>
+                           <li><b>11</b>: DDD do estado;</li> 
+                           <li><b>999999999</b>: número de celular</li>
+                        </ul>
+                        <img src="Imagens/release/1.png" class="img-custom">
+                        
+                               
+                        
+                        <hr>
+                        
+                        <h3> <u> Portal de Assinaturas </u></h3>
+                        <ul>
+                           <li>
+                              <p><strong>Remetente do documento recebendo a notificação de conclusão do documento</strong></p>
+                              <p>De forma padrão, o remetente do documento passa a receber a notificação por e-mail de conclusão do documento enviado para assinatura.</p>
+                           </li>
+                           <li>
+                              <p><strong>Informar o tipo de autenticação para realizar a assinatura</strong></p>
+                              <p>Inclusa nova funcionalidade no envio de documentos. Agora é possível informar o tipo de autenticação para assinaturas eletrônicas. Essa funcionalidade garante maior segurança no processo de assinatura eletrônica, evitando que o documento possa ser assinado por outra pessoa que tenha obtido acesso ao link de assinatura do assinante.</p>
+                              <p>Os tipos de autenticação disponíveis são:</p>
+                              <ul>
+                                 <li><b>E-mail</b>: Recebimento da solicitação de assinatura por e-mail, permitindo que a assinatura seja realizada diretamente no e-mail recebido.</li>
+                                 <li><b>E-mail e SMS:</b>: Permite que a assinatura seja realizada diretamente no e-mail recebido, além de exigir uma confirmação com código via SMS.</li>
+                                 <li><b>SMS</b>: A confirmação da assinatura é autenticada diretamente por meio do SMS.</li>
+                                 <li><b>E-mail e WhatsApp</b>: Permite que a assinatura seja realizada diretamente no e-mail recebido, além de exigir uma confirmação com código via WhatsApp.</li>
+                                 <li><b>WhatsApp</b>: Recebimento do link de assinatura diretamente pelo WhatsApp. A confirmação da assinatura é autenticada diretamente no WhatsApp.</li>
+                                 <li><b>E-mail e Aplicativo Autenticador (Google Authenticator)</b>: Permite que a assinatura seja realizada diretamente no e-mail recebido, além de exigir uma confirmação com código via aplicativo autenticador (Google Authenticator).</li>
+                                 <li><b>E-mail e Selfie</b>: Permite que a assinatura seja realizada diretamente no e-mail recebido. A assinatura eletrônica só poderá prosseguir após a habilitação da câmera para tirar uma selfie. Caso a câmera não seja habilitada, o participante só poderá continuar a assinatura utilizando o certificado digital.</li>
+                                 <li><b>E-mail e PIX</b>: Permite que a assinatura seja realizada diretamente no e-mail recebido, com solicitação de um segundo fator via PIX para confirmação. Será cobrado um valor simbólico para a confirmação, que será estornado após a autenticação.</li>
+                              </ul>
+                              <p>Com a inclusão dos tipos de autenticação, quando selecionada uma opção que utilize um número de celular (por exemplo: autenticação por e-mail e SMS, e-mail e Whatsapp), é necessário informar o número do celular do assinante. O número deve ser informado no <strong>padrão internacional</strong>, incluindo o código do país e o número do celular.</p>
+                              <p>De forma padrão, caso o participante não possua um número de celular cadastrado, já é preenchido automaticamente o código <b>55 (código do Brasil)</b>, sendo necessário o preenchimento do <b>DDD</b> e <b>número do celular</b>. </p>
+                              <img src="Imagens/release/2.png" class="img-custom">     
+                           </li>                           
+                        </ul>
+
+                        <hr>
+                        
+                        <h3> <u> Quadro de Status </u></h3>
+                        <ul>
+                           <li>
+                              <p><strong>Cancelamento (em lote) de documentos com status de Enviando</strong></p>
+                              <p>Quando os documentos não são integrados com o Portal Wesign por algum motivo, os documentos permanecem com o status de <strong>Enviando</strong>, onde é possível realizar a correção do erro e realizar uma nova tentativa de integração, sem a necessidade de realizar um novo envio do documento. </p>
+                              <p>Agora é possível realizar o cancelamento em lotes dos documentos desejados, sem a necessidade de realizar o cancelamento individualmente.</p>
+                           </li>
+                           <li>
+                              <p><strong>Download (em lote) do manifesto de documentos com status de Assinado</strong></p>
+                              <p>Para os documentos que já foram assinados e estão com status de <strong>Assinado</strong>, é possível realizar o download do manifesto dos documentos selecionados. </p>
+                              <p>O download do manifesto só é permitido para os usuários que possuam acesso ao documento original publicado no TOTVS fluig, ou seja, se o usuário não possui acesso ao documento via Documentos (GED), ele não poderá realizar o download do manifesto.</p>
+                              <p>São duas opções de manifesto disponíveis:</p>
+                              <ul>
+                                 <li><u>Manifesto completo (.zip)</u>: essa opção faz o download do arquivo original publicado no fluig juntamente com o anexo atrelado à este documento;</li>
+                                 <li><u>Arquivo assinado (.pdf)</u>: essa opção faz o download em tempo de execução do manifesto diretamente do Portal de Assinaturas.</li>
+                              </ul>
+                           </li>
+                           <li>
+                              <p> <strong>Gerar manifesto do documento</strong> </p>
+                              <p>É possível executar a verificação do documento <strong>Pendente</strong> em tempo de real e realizar a geração do manifesto (quando o documento estiver completamente assinado).</p>
+                              <p>A opção só estará disponível para o usuário remetente do documento ou usuários administradores do fluig.</p>
+                              <img src="Imagens/release/3.png" class="img-custom">  
+                           </li>
+                           <li>
+                              <p><strong>Detalhes do assinante</strong></p>
+                              <p>Inclusa nova funcionalidade ao visualizar os assinantes do documento. No botão <strong>Detalhes</strong> irá exibir as informações do participante de forma resumida.</p>
+                              <img src="Imagens/release/4.png" class="img-custom"> 
+                           </li>
+                           <li>
+                              <p><strong>Alteração de layout Parâmetros de busca dos documentos</strong></p>
+                              <p>O layout dos <strong>Parâmetros de busca dos documentos</strong> foi alterado para facilitar a utilização do usuário. O funcionamento permanece o mesmo.</p>
+                              <img src="Imagens/release/5.png" class="img-custom"> 
+                           </li>
+                        </ul>
+                     </article>     
+                  </div>
+               </div>
+                           
+                         
+            </section>
+         </main>
+      </div>
+   </div>
+
+</body>
+
+</html>
