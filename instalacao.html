@@ -89,12 +89,13 @@
             <section id="requisitos">
                <h1> Requisitos</h1>               
                <article>
-                  <p> O app utilizará uma licença de usuário para executar atualizações no documento via serviço <a class="link-default" href="./configuracao.html#callback">Callback</a>.
-                  Acesse a documentação da TOTVS para maiores informações: <a href="https://bit.ly/2SEW4bz">Como expor dados em ambientes públicos</a></p>
+                  <p> O app utilizará uma licença de usuário para o <a class="link-default" href="./configuracao.html#usuario-callback">Usuário do Serviço Callback</a>.                  
+                  <p> É necessário que os endereços do Portal de Assinaturas não possuam restrições de acesso pelo servidor do fluig. Acesse <a class="link-default" href="./configuracao.html#servico-externo">Serviço de Integração Portal de Assinaturas</a> 
+                  para maiores informações.
+                  </p>
                   <p> Para realizar a instalação do app Wesign no TOTVS Fluig, é necessário a utilização de um usuário com papel de administrador. </p>               
                   <p>O procedimento deve ser realizado pela <strong> Central de Componentes</strong>, disponível no <strong>Painel de Controle</strong>. Após o upload do componente EAR, habilite as widgets da para utilização. </p>                  
-                  <img src="Imagens/Instalação/1.png" class="img-custom">                  
-                  
+                  <img src="Imagens/Instalação/1.png" class="img-custom"> 
                </article>               
             </section>
 
@@ -153,7 +154,7 @@
                      e executa os webservices do TOTVS fluig para funcionamento do app na plataforma.                     
                   </li>
                   <li>                     
-                     <strong>ds_callback_wesign</strong>: É o dataset responsável por atualizar o status do documento
+                     <strong>ds_callback_wesign</strong>: É o dataset responsável por atualizar o status do documento/assinante
                         e gerar o manifesto de assinaturas quando o ambiente possui o serviço <a class="link-default" href="./configuracao.html#callback">Callback</a> ativo.                     
                   </li>
                   <li>
@@ -174,15 +175,15 @@
                      disponíveis do GED (Documentos) para envio.                     
                   </li>
                   <li>                     
-                     <strong>ds_package_wesign</strong>: É o dataset responsável por atualizar o status do documento e gerar o manifesto de assinaturas. Sua lógica verifica se todos os documentos enviados nos últimos 6 meses e que estão status de <strong>Pendente</strong> foram assinados no
-                      <b>Portal de Assinaturas</b>. É executado periodicamente conforme definido em <strong>Painel de Controle > Agendador de Tarefas</strong>. Por padrão, é executado uma vez ao dia.                      
+                     <strong>ds_package_wesign</strong>: É o dataset responsável por atualizar o status do documento e gerar o manifesto de assinaturas. Sua lógica verifica se todos os documentos enviados nos últimos 3 meses e que estão status de <strong>Pendente</strong> foram assinados no
+                      <b>Portal de Assinaturas</b>. É executado periodicamente conforme definido em <a class="link-default" href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a>.                      
                   </li>
                   <li>
                      <strong>ds_package_completo_wesign</strong>: possui o mesmo funcionamento do dataset <b>ds_package_wesign</b>, porém verifica todos os documentos com status de <strong>Pendente</strong>, independente da data de envio.
                      Quanto mais documentos com o status de <b>Pendente</b>, maior será o tempo de execução do dataset.                     
                   </li>
                   <li>
-                     <strong>ds_reject_document_wesign</strong>: atualizar o status do documento para "Rejeitado"
+                     <strong>ds_reject_document_wesign</strong>: atualizar o status do documento para <b>Rejeitado</b>
                         quando recebe a notificação via serviço <a class="link-default" href="./configuracao.html#callback">Callback</a>.                     
                   </li>
                   <li>
@@ -197,7 +198,8 @@
                      cada envio de documento.                     
                   </li>
                   <li>
-                     <strong>ds_upload_wesign</strong>: possui o mesmo funcionamento do dataset <b>ds_upload_wesign_manual</b>, porém verifica todos os documentos com status de <strong>Enviando</strong> que não foram integrados.                                             
+                     <strong>ds_upload_wesign</strong>: possui o mesmo funcionamento do dataset <b>ds_upload_wesign_manual</b>, porém verifica todos os documentos com status de <strong>Enviando</strong> que não foram integrados. É executado periodicamente conforme definido em <a class="link-default"
+                        href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a>.
                   </li>
                </ul>
                

@@ -47,12 +47,12 @@
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#parametros">
-                  Parâmetros
+                  Parâmetros de Integração
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#campos">
-                  Campos
+                <a class="nav-link d-flex align-items-center gap-2" href="#servico-externo">
+                  Serviço de Integração Portal de Assinaturas
                 </a>
               </li>
               <li class="nav-item">
@@ -61,33 +61,19 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#servico-externo">
-                  Serviço externo
+                <a class="nav-link d-flex align-items-center gap-2" href="#usuario-callback">
+                  Usuário do Serviço Callback
+                </a>
+              </li>              
+              
+              <li class="nav-item">
+                <a class="nav-link d-flex align-items-center gap-2" href="#datasets-sincronizados">
+                  Datasets sincronizados
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#usuario-integracao">
-                  Usuário de integração
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#rotinas-integracao">
-                  Rotinas de integração
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#agendamento">
-                  Configurações do agendamento
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#bpm">
-                  Integração com BPM
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link d-flex align-items-center gap-2" href="#widgets">
-                  Adicionar widgets em outras páginas
+                <a class="nav-link d-flex align-items-center gap-2" href="#fluxo-processo">
+                  Integração com fluxo de processo
                 </a>
               </li>
             </ul>
@@ -96,237 +82,189 @@
       </div>
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-        <div class="row" id="parametros">
-          <h1> Parâmetros</h1>
-          <hr>
-          <p>Os parâmetros são obrigatórios na instalação a fim de definir todas as configurações iniciais
-            necessárias para
-            começar a utilizar o app. Abaixo encontra-se a descrição de cada campo.</p>
-          <img src="Imagens/Configuração/wizard-param1.png" class="img-fluid" alt="">
-        </div>
 
-        <div class="row" id="campos">
-          <h1> Campos</h1>
-          <hr>
-          <h6><strong>Token</strong></h6>
-          <p>O Token é uma informação de controle de acesso no Portal de Assinaturas Certisign.
-            Na contratação do app Vertsign <strong>dois ambientes do Portal de Assinaturas Certisign são
-              liberados</strong>: um ambiente de homologação e um ambiente de produção. Cada ambiente possui o seu
-            respectivo token.
-            O Token será enviado por email pela Vertsign para o administrador do sistema cadastrado na
-            TOTVS. Caso a empresa não tenha recebido o token, favor encaminhar um email para <a class="link-default"
-              href="mailto:contato@vertsign.com.br" target="_top">contato@vertsign.com.br</a>.
-          </p>
-
-          <h6><strong>Nome do usuário de integração</strong></h6>
-          <p>Usuário administrador do fluig responsável pelas integrações. </p>
-
-          <h6><strong>Senha de integração</strong></h6>
-          <p>Senha do usuário de integração.</p>
-
-          <h6><strong>Homologação</strong></h6>
-          <p>Marque esse campo caso o token utilizado seja de homologação. Todos documentos enviados para
-            a base de homologação não possuem validade jurídica.</p>
-          <p>Mesmo estando no ambiente de produção do fluig, é possível utilizar o ambiente de homologação
-            da Vertsign. É o token que define qual ambiente será utilizado (homologação ou produção).</p>
-        </div>
-
-        <div class="row" id="callback">
-          <h1> Serviço Callback </h1>
-          <hr>
-          <p>É um serviço que notifica os serviços do cliente com base em alterações/eventos e foi
-            projetado para garantir a atualização dos status, mesmo que ocorra alguma instabilidade no
-            serviço.</p>
-          <p>Em outras palavras, ele faz a atualização instantânea dos status da assinatura do documento
-            quando ele é assinado.</p>
-          <p>Com o callback ativo, é possível acompanhar os status de assinatura de cada assinante no
-            Quadro de Status. Por padrão ele vem desabilitado e para ativá-lo é obrigatório informar os 3
-            campos ("URL", "UUID" e "Código da Empresa") para que a equipe da Vertsign (suporte@vertsign.com.br) faça a
-            configuração no Portal da Vertsign.</p>
-          <p>Caso ele permaneça desabilitado, não será possível acompanhar os status dos assinantes e o
-            retorno do documento assinado deve ser feito pelo Agendador de Tarefas do fluig. </p>
-
-          <div class="alert alert-danger" role="alert">
-            <h3 class="fs-no-margin-top">
-              <strong>Atenção!</strong>
-            </h3>
-            <p>Caso o callback seja habilitado, o ambiente onde o fluig está instalado deve ter o DNS
-              público, caso contrário o download dos documentos assinados não funcionará.</p>
-            <p>Outro ponto importante é a inclusão do usuário integration no papel <strong>admin</strong>. Veja mais
-              detalhes no tópico <a class="link-default" href="./configuracao.html#usuario-integracao">Usuário de
-                integração</a>.</p>
-          </div>
-
-          <img src="Imagens/Configuração/wizard-param5.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="row" id="servico-externo">
-          <h1> Serviço externo </h1>
-          <hr>
-          <h6><strong>vertsignServiceRest</strong></h6>
-          <p>Após preencher todos os campos e clicar em <strong>Salvar</strong>, o formulário de parâmetros gerais será
-            atualizado com as
-            novas informações e o serviço vertsignServiceRest será criado no fluig.</p>
-          <img src="Imagens/Configuração/wizard-param3.png" class="img-fluid" alt="">
-          <p>O campo token é utilizado para realizar as integrações entre o fluig e a
-            Certisign. O serviço
-            vertsignServiceRest é o responsável por fazer esta integração. Caso o token seja alterado,
-            este serviço será
-            removido e criado novamente com o novo token.</p>
-
-
-          <p>Os endereços abaixo devem ser liberados para que as integrações sejam realizadas:
-          <p><strong>https://api-sbx.portaldeassinaturas.com.br</strong></p>
-          <p><strong>https://api.portaldeassinaturas.com.br</strong></p>
-          </p>
-          <img src="images/wizard-param4.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="row" id="usuario-integracao">
-          <h1> Usuário de integração </h1>
-          <hr>
-          <p>Na última etapa da instalação deve ser definido nos <a class="link-default"
-              href="./configuracao.html#parametros">Parâmetros</a> um usuário administrador
-            para realizar as integrações internas do fluig.</p>
-          <p>Caso o fluig esteja configurado com o Identity, o campo “Senha de integração” deve
-            ser preenchido com a senha do Identity do usuário de integração.</p>
-          <div class="alert alert-info" role="alert">
-            <p>É recomendável utilizar um usuário exclusivo para integração para evitar eventuais quedas de sessões do
-              fluig.</p>
-          </div>
-
-          <div class="alert alert-danger" role="alert">
-            <h3 class="fs-no-margin-top">
-              <strong>Atenção!</strong>
-            </h3>
-            <p>Caso a senha do usuário de integração seja alterada,
-              deve-se lembrar de alterar também nos parâmetros.</p>
-            <p>Outro cuidado que deve ser tomado é caso o usuário de integração seja desativado da
-              plataforma. Nesse caso, deve-se acessar os parâmetros do app e definir outro
-              usuário.</p>
-          </div>
-
-          <p>Após a instalação da versão 1.1.0 da Vertsign, será criado um usuário chamado
-            <strong>integration-1234-5678-9876-5432-X (X = código da empresa do fluig)</strong>. </p>
-          <p>Ele é responsável pela autenticação no momento que o Serviço Callback é chamado.</p>
-          <p>Para que o Serviço Callback funcione corretamente, é necessário incluir esse usuário no papel
-            <strong>admin</strong>.</p>
-
-          <img src="Imagens/Configuração/wizard-param6.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="row" id="rotinas-integracao">
-          <h1> Rotinas de integração </h1>
-          <hr>
-          <p>A integração entre fluig e Certisign ocorrem através de datasets sincronizados que verificam
-            o status da
-            assinatura dos documentos e realizam as integrações.
-            Por padrão esses scripts são executados uma vez por dia, mas também podem ser executados
-            manualmente acessado o
-            Agendador de Tarefas no Painel de Controle. O fluig permite também alterar esse tempo de
-            agendamento.
-          </p>
-
-          <p>Os datasets responsáveis por realizar o envio/download dos documentos são:</p>
-          <ul>
-            <li><strong>ds_upload_vertsign</strong>: Envia os documentos para assinatura.</li>
-            <li><strong>ds_package_vertsign</strong>: Baixa os documentos assinados.</li>
-          </ul>
-          <img src="Imagens/Configuração/wizard-agendador1.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="row" id="agendamento">
-          <h1> Configurações do agendamento </h1>
-          <hr>
-          <p>Após a instalação dos datasets, as rotinas de integração serão configuradas para executar uma
-            vez por dia.
-            Essas rotinas são responsáveis por enviar e baixar os documentos do Portal de Assinaturas da
-            Vertsign.
-          </p>
-          <p>Mas existe a possibilidade de alterar a frequência de execução. Abaixo será explicado como o
-            usuário administrador
-            da plataforma pode realizar essa alteração:
-          </p>
-          <ol>
-            <li>Acesse o Painel de Controle do fluig</li>
-            <li>Acesse o Agendador de tarefas</li>
-            <li>Localize as duas rotinas de integração (ds_package_vertsign e ds_upload_package)</li>
-            <li>Selecione a rotina que deseja alterar</li>
-            <li>Clique em <strong>Deletar</strong></li>
-            <li>Clique em <strong>Adicionar</strong></li>
-            <li>Insira uma descrição e selecione a opção "Sincronização de dataset"</li>
-            <img style="width: 400px;" src="Imagens/Configuração/config-agendador1.png" class="img-fluid" alt="">
-            <li>Selecione o dataset <strong>ds_package_vertsign</strong></li>
-            <img style="width: 400px;" src="Imagens/Configuração/config-agendador2.png" class="img-fluid" alt="">
-            <li>Feito isso, selecione a frequência de execução e clique em <strong>Confirmar</strong>.
-              Mais detalhes em <a target="_blank" class="link-default"
-                href="http://tdn.totvs.com/display/public/HF/Agendador+de+tarefas">fluig help</a>.
-            </li>
-            <img style="width: 400px;" src="Imagens/Configuração/config-agendador3.png" class="img-fluid" alt="">
-
-          </ol>
-
-          <p>Agora a rotina que baixa os documentos assinados do Portal de Assinaturas da Certisign será
-            executada com a frequência determinada. </p>
-          <p>A data da próxima sincronização é exibida do lado superior direito do <a class="link-default"
-              href="./index.html#secaoAcompanha">Quadro de Status</a> como na imagem abaixo:</p>
-          <img style="width: 800px;" src="Imagens/Configuração/config-agendador4.png" class="img-fluid" alt="">
-        </div>
-
-        <div class="row" id="bpm">
-          <h1> Integração com BPM </h1>
-          <hr>
-          <p>Após a aquisição do app, todas as funcionalidades de integração entre ECM e Certisign estarão
-            disponíveis na plataforma. Caso haja a necessidade de implementar um processo que possui
-            envio de documentos para assinatura, todas as funções necessárias para realizá-lo poderão
-            ser reaproveitadas do app Vertsign. Ou seja, o componente Vertsign permite que o envio de
-            documentos para assinatura através de um processo possa ser realizado.
-            Para isso, é necessário seguir algumas etapas. Abaixo está detalhado um exemplo de como
-            enviar um documento para assinatura através de um processo.
-          <ul>
-            <li>Criar um registro no formulário <strong>Formulário Auxiliar</strong> que está localizada dentro da
-              pasta <strong>Formulário – Vertsign</strong></li>
-            <li>Nesse registro deve ser inserido os seguintes campos:</li>
+        <section id="parametros">
+          <h1> Parâmetros de Integração</h1>
+          <article>
+            <p>Os parâmetros são obrigatórios na instalação a fim de definir todas as configurações iniciais
+              necessárias para
+              começar a utilizar o app. Abaixo encontra-se a descrição de cada campo.
+            </p>
             <ul>
-              <li>Nome Documento (nome do documento anexado ao processo)</li>
-              <li>Cód. Documento (código do documento anexado ao processo)</li>
-              <li>Versão Documento</li>
-              <li>Pasta Origem (pasta onde está localizado o documento)</li>
-              <!-- <li>E-mail (e-mail dos assinantes separado por “;”)</li> -->
-              <li>Cód. Remetente (código do usuário remetente)</li>
-              <li>Nome Remetente</li>
-              <li>Status da Assinatura (Deixar como <i>Enviando para assinatura</i>)</li>
-              <li>Data (Data em que o documento foi enviado)</li>
-              <li>Hora (Horário em que o documento foi enviado)</li>
-              <li>Assinantes (Array contendo todos os dados dos assinantes) </li>
-              <li>Número da solicitação (Número da solicitação criada)</li>
-              <li>Número da atividade (Número da atividade na qual o documento assinado será anexado)</li>
-
-              <li>Feito isso, as rotinas de integração (ds_upload_vertsign, ds_package_vertsign, ds_callback_vertsign)
-                se
-                encarregarão de realizar as integrações com a Certisign.</li>
+              <li>
+                <h4>Token</h4>
+                <p>É uma string (sequência de caracteres) única, utilizada para representar a empresa e permitir o acesso aos
+                  webservices para integração no Portal de Assinaturas.</p>
+              </li>
+              <li>
+                <h4>Usuário de integração</h4>
+                <p>Usuário com perfil de <strong>administrador</strong> responsável por realizar as integrações entre fluig e Portal
+                  de Assinaturas.</p>
+              </li>
+              <li>
+                <h4>Senha de integração</h4>
+                <p>Senha do usuário de integração.</p>
+                <div class="alert alert-warning col-md-8" role="alert">
+                  <p>Se houver alteração de senha do usuário, é necessário informar a senha atualizada e <strong>Salvar
+                      parâmetros</strong>.</p>
+                  <p>O app não irá permitir a utilização caso a senha informada esteja incorreta ou desatualizada.</p>
+                </div>
+              </li>
+              <li>
+                <h4>Homologação</h4>
+                <p>Marque esse campo caso o token utilizado seja do Portal de Assinaturas Homologação. Todos documentos enviados
+                  para
+                  a base de homologação não possuem validade jurídica.</p>
+              </li>
             </ul>
-          </ul>
-          </p>
-        </div>
+            <img src="Imagens/Configuração/1.png" class="img-custom">
+          </article>          
+        </section>
 
-        <div class="row" id="widgets">
-          <h1> Adicionar widgets em outras páginas </h1>
-          <hr>
-          <p> As widgets da Vertsign estão disponíveis para serem inseridas em outras páginas editáveis do fluig.</p>
-          <p>O exemplo abaixo mostra como incluir as widgets na página Home. As widgets estão localizadas na categoria
-            <strong>Assinatura digital</strong>.</p>
-          <p> O layout das páginas do Vertsign também podem ser utilizados na criação de novas páginas no fluig.</p>
-          <br>
-          <i> Adicionando as widgets em outras páginas </i>
-          <img src="Imagens/Configuração/uso-widget1.png" class="img-fluid" alt="">
+        <hr>
 
-          <i> Widget adicionada em outras páginas </i>
-          <img src="Imagens/Configuração/uso-widget2.png" class="img-fluid" alt="">
+        <section id="servico-externo">
+          <h1> Serviço de Integração Portal de Assinaturas </h1>
+          <article>
+            <p>Ao clicar em <strong>Salvar parâmetros</strong>, será criado o serviço
+              <strong>wesigner</strong> em <strong>Painel de Controle > Serviços</strong>.
+            </p>
+            <p>Este serviço é responsável por realizar as integrações entre o TOTVS fluig e o Portal de Assinaturas.</p>
+            <p>Os endereços abaixo devem ser liberados no servidor de aplicação do TOTVS fluig para que as integrações sejam
+              realizadas:
+            <p><strong>https://assinatura.homologwesign.com.br</strong> - Endereço do Portal de Assinaturas Homologação</p>
+            <p><strong>https://portal.wesign.com.br</strong> - Endereço do Portal de Assinaturas Produção</p>
+          </article>
+        </section>
 
-          <i> Layout que pode ser utilizado em outras páginas </i>
-          <img src="Imagens/Configuração/uso-layout.png" class="img-fluid" alt="">
-        </div>
+        <hr>
+
+        <section id="callback">
+          <h1> Serviço Callback </h1>
+          <article>
+            <p>
+              O <b>Callback</b> é um serviço que avisa automaticamente seu TOTVS fluig quando acontece alguma ação no documento, como a assinatura
+              de um participante. Ele ajuda a manter as informações do documento sempre atualizadas em tempo real. 
+              Ou seja, assim que o documento é assinado, o Portal de Assinaturas envia um aviso para que o status dessa assinatura seja
+              atualizado na hora no TOTVS fluig.
+            </p>
+            <p>Para seu funcionamento, é necessário que o endereço do TOTVS fluig público, ou seja, não necessite de acesso à uma VPN. </p>
+            <p>Se o servidor de aplicação do TOTVS fluig possui regras de acesso, é necessário que os endereços de IP abaixo sejam liberados.
+            Estes são os endereços de IP que os servidores do Portal de Assinaturas utilizará para enviar as notificações ao TOTVS fluig:
+            </p>
+            <p><strong>Produção</strong></p>
+            <p>
+              104.41.15.44,104.41.14.184,104.41.13.132,104.41.12.97,20.201.81.246,104.41.56.229,104.41.30.250,
+              20.206.191.81,191.235.52.58,191.235.52.65,191.235.52.78,191.235.52.195,191.235.52.245,191.235.53.35,
+              191.235.53.57,191.235.53.74,191.235.53.158,191.235.54.48,191.235.54.59,104.41.13.179
+            </p>
+            <p><strong>Homologação</strong></p>
+            <p>
+              191.235.41.23,191.235.42.102,191.235.43.227,191.235.44.10,191.235.44.21,191.235.44.195,20.206.225.71,
+              191.235.57.182,191.235.60.212,20.226.162.193,20.226.162.236,20.226.163.21,20.226.163.71,20.226.163.144,
+              20.226.163.231,20.226.164.12,20.226.164.22,20.226.165.196,20.226.165.221,20.226.165.232,20.226.166.183,
+              20.226.167.46,20.226.163.69,20.226.167.66,20.226.167.68,20.226.167.129,20.226.167.172,20.226.167.223,
+              20.226.167.244,20.226.167.247,20.206.176.5
+            </p>
+
+            <p>Se o seu ambiente não utilizar o <strong>Callback</strong> ou por algum motivo o serviço de Callback não notificar o TOTVS fluig,
+              os dados dos documentos serão atualizados através do dataset <strong>ds_package_wesign</strong>. 
+              Acesse <a class="link-default" href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a> para maiores informações.
+            </p>
+            <img src="Imagens/Configuração/2.jpg" class="img-custom">
+          </article>          
+        </section>
+
+        <hr>
+
+        <section id="usuario-callback">
+          <h1> Usuário do Serviço Callback </h1>
+          <article>
+        
+            <p>Após a ativação do app Wesign na <strong>Central de Componentes</strong>, será criado um usuário chamado
+              <strong>integration-1234-5678-9876-5432-X (X = código da empresa do fluig)</strong>
+              no TOTVS fluig.
+            </p>
+            <p>Ele é responsável por realizar as operações de atualização de dados do documento quando o serviço Callback é
+              acionado pelo Portal de Assinaturas.</p>
+            <p>Para que o Callback funcione corretamente, é necessário incluir esse usuário no papel
+              <strong>admin</strong>.
+            </p>
+            <p>
+              Acesse a documentação da TOTVS para maiores informações: <a href="https://bit.ly/2SEW4bz">Como expor dados em
+                ambientes
+                públicos</a>
+            </p>
+          </article>
+        
+          <img src="Imagens/Configuração/wizard-param6.png" class="img-custom" alt="">
+        </section>
+
+        <hr>        
+
+        <section id="datasets-sincronizados">
+          <h1> Datasets sincronizados </h1>
+          <article>
+            <p>Se o seu ambiente não utilizar o <strong>Callback</strong> ou por algum motivo o serviço de Callback não notificar o
+              TOTVS fluig,
+              os dados dos documentos serão atualizados através do dataset <strong>ds_package_wesign</strong>.
+            </p>   
+            <p> Após a instalação do app, é recomendado que o dataset seja configurado para executar de forma sincronizado em um determinado intervalo
+              de tempo que pode ser configurado conforme sua preferência.
+            </p>   
+
+            <p>Os datasets que podem ser sincronizados são:</p>
+            <ul>
+              <li>
+                <strong>ds_upload_wesign</strong>: Verifica todos os documentos com status de <strong>Enviando</strong> que não foram integrados
+                e tentar integrar novamente.
+                <div class="alert alert-warning col-md-8" role="alert">
+                  <p>Este dataset irá verificar todos os documentos que não foram integrados e estão com status de <strong>Enviando</strong>.
+                  e tentará integrar novamente com o Portal de Assinaturas.</p>   
+                  <p>Certifique-se sobre a necessidade de deixar esse dataset sincronizado para sua execução, uma vez que o remetente do documento
+                    ao não integrar (envio 1), pode realizar um novo envio e neste novo envio o documento ser integrado corretamente (envio 2), ficando o outro documento (envio 1)
+                    com status de <strong>Enviando</strong>. </p>
+                  <p>Quando o dataset for executado, ele tentará realizar a integração (envio 1) e isso pode causar "duplicidade" e gastos de créditos para um 
+                    documento que já foi integrado em outro envio (envio 2).                    
+                  </p>                                 
+                </div>
+              </li>
+              <li>
+                <strong>ds_package_wesign</strong>: É o dataset responsável por atualizar o status do documento e gerar o manifesto de
+                assinaturas. Sua lógica verifica se todos os documentos enviados nos últimos 3 meses e que estão status de
+                <strong>Pendente</strong> foram assinados no
+                <b>Portal de Assinaturas</b>.
+              </li>
+              <li>
+                <strong>ds_package_completo_wesign</strong>: possui o mesmo funcionamento do dataset <b>ds_package_wesign</b>, porém
+                verifica todos os documentos com status de <strong>Pendente</strong>, independente da data de envio.
+                Quanto mais documentos com o status de <b>Pendente</b>, maior será o tempo de execução do dataset.
+              </li>
+            </ul>
+            
+            <p>Para configurar o agendamento do dataset, siga os passos abaixo. Para maiores informações, acesse <a target="_blank" class="link-default"
+                href="https://tdn.totvs.com/pages/releaseview.action?pageId=234455387">Agendador de Tarefas</a>.</p>
+
+            <ol>
+              <li>Acesse o <strong>Painel de Controle</strong></li>
+              <li>Acesse o <strong>Agendador de tarefas</strong></li>
+              <li>Clique em <strong>Adicionar</strong></li>
+              <li>Insira uma descrição e selecione a opção <strong>Sincronização de dataset</strong></li>
+              <img style="width: 400px;" src="Imagens/Configuração/config-agendador1.png" class="img-custom" alt="">
+              <li>Em <strong>Datasets</strong>, procure pelo dataset desejado</li>
+              <li>Selecione a frequência de execução e clique em <strong>Confirmar</strong>.</li>              
+            </ol>
+          </article>          
+        </section>
+
+        <hr>
+        <section id="fluxo-processo">
+          <h1> Integração com fluxo de processo </h1>
+          <article>
+            <p>É possível realizar uma integração entre um fluxo de processo com o app Wesign para realizar o envio de documentos de forma customizada.</p>
+            <p>Entre em contato com o <b>Suporte Wesign</b> para obter o código-fonte do fluxo de processo e formulário com as integrações. </p>
+          </article>          
+        </section>
       </main>
     </div>
   </div>
