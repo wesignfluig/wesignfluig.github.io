@@ -1,652 +1,261 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
-  <head>
-    <!-- Meta tags Obrigatórias -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Meta tags Obrigatórias -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!--CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/headers.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+  <link href="css/all.min.css" rel="stylesheet">
+  
+  <link href="css/custom.css" rel="stylesheet">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script defer src="js/sidebars.js"></script>
+  <script src="js/main.js"></script>
+  <title> Configuração - Wesign </title>
+</head>
 
-    <!--CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/headers.css" rel="stylesheet">
-    <link href="css/dashboard.css" rel="stylesheet">
+<body>
+  <!-- Header Section -->
+  <div class="header-section">
+    <div class="container">
+      
+        <img fetchpriority="high" sizes="142px" src="Imagens/wesign/wesign-logo.avif" width="142" height="62">
+      
+      <div class="row align-items-center">        
+        <div class="col-md-8">
+          <h1 class="display-4 fw-bold mb-3">            
+            Manual do app Wesign fluig
+          </h1>
+          <p class="lead mb-0">
+            Aprenda tudo sobre a utilização do app no TOTVS Fluig.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-rocket" style="font-size: 5rem; opacity: 0.3;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!--
-        <link href="css/sidebars.css" rel="stylesheet">
-        -->
-
-    <link href="css/custom.css" rel="stylesheet">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script defer src="js/sidebars.js"></script>
-    <script src="js/main.js"></script>
-    <title> Utilização - Wesign </title>
-  </head>
-
-  <body>
-
-    <header class="navbar sticky-top flex-md-nowrap p-0 shadow d-flex justify-content-center py-3 bg-white">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="instalacao.html" class="nav-link" aria-current="page">Instalação</a></li>
-        <li class="nav-item"><a href="configuracao.html" class="nav-link">Configuração</a></li>
-        <li class="nav-item"><a href="index.html" class="nav-link active">Utilização</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li class="nav-item"><a href="release-notes.html" class="nav-link">Release Notes</a></li>
-      </ul>
-    </header>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="sidebar flex-md-nowrap border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary">
-          <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu"
-            aria-labelledby="sidebarMenuLabel">
-
-            <h6
-              class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-              <span>Cadastro de assinantes</span>
-            </h6>
-            
-            <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#cadastrando-assinantes">
-                    Cadastrando assinantes
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#editando-assinantes">
-                    Editando dados de um assinante
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#removendo-assinantes">
-                    Removendo um assinante
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#carregando-assinantes">
-                    Carregando todos os assinantes
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#layout-importacao">
-                    Layout de importação de assinantes
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#importando-assinantes">
-                    Importando assinantes
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#exportando-assinantes">
-                    Exportando assinantes
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#excluindo-assinantes">
-                    Excluindo os assinantes
-                  </a>
-                </li>
-              </ul>
+  <!-- Main Content -->
+  <div class="container mb-5">
+    <div class="row g-4">
+      <!-- Instalação-->
+      <div class="col-lg-6">
+        <div class="card feature-card">
+          <div class="card-body p-4">
+            <div class="feature-icon icon-share">
+              <i class="fas fa-cloud-upload-alt"></i>
             </div>
 
-            <h6
-              class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-              <span>Portal de assinaturas</span>
-            </h6>
-            
-            <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#enviando-documento">
-                    Enviando documento para assinatura
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#email-notificacao">
-                    Enviando e-mail de notificação
-                  </a>
-                </li>
-              </ul>
+            <h3 class="card-title text-center fw-bold mb-4">Instalação</h3>
+
+            <div class="intro-badge">
+              <i class="fas fa-info-circle me-2"></i>
+              Exclusivo para administradores do TOTVS fluig
             </div>
 
-            <h6
-              class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
-              <span>Quadro de status</span>
-            </h6>
+            <p class="text-muted mb-4">
+              Saiba todos os detalhes do processo de instalação do app no TOTVS fluig, quais são os requisitos necessários para funcionamento, como o processo é realizado,
+              quais são os formulários, datasets e serviços.              
+            </p>
 
-            <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#modo-utilizacao">
-                    Modo de utilização
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#notificando-assinante">
-                    Notificando os assinantes
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#assinar-documento">
-                    Assinando documento no fluig
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#incluindo-assinante">
-                    Incluindo assinante
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#descartando-assinante">
-                    Descartando assinante
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#cancelando-documento">
-                    Cancelando um documento
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#verificando-documento">
-                    Verificando o documento assinado
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#excluindo-documento">
-                    Excluindo documento do GED
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#extraindo-relatorio">
-                    Extraindo relatório
-                  </a>
-                </li>
-              </ul>
+            <!--
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-list-ol me-2 text-primary"></i>
+              Como utilizar:
+            </h5>
+
+            <div class="steps-container">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div>
+                  <strong>Acesse a área de Upload</strong><br>
+                  <small class="text-muted">Clique no botão "Novo Documento" na tela principal</small>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div>
+                  <strong>Selecione os arquivos</strong><br>
+                  <small class="text-muted">Arraste e solte ou clique para selecionar os
+                    documentos</small>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div>
+                  <strong>Confirme o envio</strong><br>
+                  <small class="text-muted">Verifique os arquivos e clique em "Enviar
+                    Documentos"</small>
+                </div>
+              </div>
+            </div>
+            -->
+
+            <div class="text-center mt-4">
+              <a class="btn btn-custom text-white" href="./instalacao.html">
+                <i class="fas fa-share me-2"></i>
+                Acessar
+              </a>
             </div>
           </div>
         </div>
+      </div>
 
-        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Configuração -->
+      <div class="col-lg-6">
+        <div class="card feature-card">
+          <div class="card-body p-4">
+            <div class="feature-icon icon-share">              
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
 
-          <section id="cadastroAssinantes">
-            <h1>Cadastro de assinantes</h1>
+            <h3 class="card-title text-center fw-bold mb-4">Configuração</h3>
 
-            <section id="cadastrando-assinantes">
-              <h1>Cadastrando o assinante</h1>  
-              <p> Acesse <strong> Wesign > Cadastro de Assinantes. </strong></p>            
-              <p>
-                Para facilitar o envio de documentos para assinatura, você pode cadastrar participantes frequentes na base de dados.
-                Assim, não será necessário digitar as informações deles a cada novo envio.
-              </p>
-              <p>O cadastro de assinante não é obrigatório para enviar um documento ao assinante.</p>
-              <p>Os dados utilizados são:</p>
-              <ul>
-                <li><strong>Nome*:</strong> nome do assinante.</li>
-                <li><strong>E-mail*:</strong> e-mail do assinante que receberá o link de assinatura e
-                  notificações de conclusão do processo de assinatura</li>
-                <li><strong>CPF*:</strong> CPF do assinante.</li>
-                <li><strong>Celular:</strong> Celular do assinante que receberá notificações quando selecionado tipo de autenticação no envio do documento.
-                Deve ser informado no padrão internacional, incluindo o código do país. </li>
-                <li><strong>Título:</strong> nomenclatura opcional utilizada para identificar o assinante no
-                  processo de assinaturas e no manifesto, por exemplo, “Cliente”, “Representante da empresa X”, “Diretor
-                  Financeiro”, “Gerente”.</li>
-                <li><strong>Empresa:</strong> nome da empresa do assinante. Utilizado para facilitar a identificação do assinante no envio de documento.
-                  Esse dado não é utilizado no fluxo de assinaturas, servindo apenas de identificador no fluig.</li>
-                <li><strong>Tipo de Assinatura*:</strong> escolher o tipo de assinatura que o assinante
-                  utilizará no fluxo de assinaturas. Abaixo, mais detalhes sobre as opções disponíveis:</li>
-              </ul>
-              <h5>Assinatura digital</h5>
-              <p>A assinatura digital utiliza um Certificado Digital ICP Brasil para comprovar a autoria da assinatura. A
-                assinatura digital garante autenticidade, integridade e não repúdio (signatário não tem como negar sua
-                autoria). O Certificado Digital é a identidade digital da pessoa física e jurídica no meio eletrônico. É
-                validado presencialmente, não permitindo fraudes. Se você necessita mandar documentos para fora de sua rede,
-                é fundamental que haja confiança pública para que a assinatura seja automaticamente aceita pelos diferentes
-                órgãos e empresas. Nesse caso, a assinatura digital é mais conveniente, pois possui a mesma validade
-                jurídica de um documento com firma reconhecida em cartório.</p>
-              <h5>Assinatura eletrônica</h5>
-              <p>A assinatura eletrônica coleta evidências para comprovar a autoria da assinatura em um documento e não
-                utiliza um Certificado Digital. Estas evidências são coletadas no momento da assinatura. O Portal coleta
-                três principais: a grafia do signatário (com uma caneta touch, dedo, mouse ou a imagem digitalizada), IP da
-                máquina e geolocalização. A assinatura eletrônica viabiliza a migração de ações do dia a dia da empresa do
-                meio físico para o digital, reduzindo custos operacionais e poupando tempo. Se você necessita apenas deixar
-                de usar papel e agilizar os processos, então conformidade e confiança não devem ser um problema, e a
-                assinatura eletrônica pode ser considerada.</p>
-              <h5>Autorizador</h5>
-              <p>O usuário autorizador terá a opção de negar ou autorizar um documento, sendo assim, possui uma ação e o
-                documento só é finalizado após todos os participantes finalizarem suas ações. Caso o autorizador negue, o
-                documento é bloqueado só sendo permitido desbloquear com um usuário administrador ou remetente.</p>
-              <h5>Observador</h5>
-              <p>É um participante do fluxo sem nenhuma ação no mesmo, ou seja, não irá assinar. O usuário receberá
-                notificações sobre o documento e terá permissão para visualiza-lo.</p>
-              
-              <div class="alert alert-warning col-md-2" role="alert">
-                <p>*Preenchimento obrigatório</p>                
+            <div class="intro-badge">
+              <i class="fas fa-info-circle me-2"></i>
+              Exclusivo para administradores do TOTVS fluig
+            </div>
+            
+            <p class="text-muted mb-4">
+              Descubra todas as parametrizações necessárias e como o app funciona para realizar todas as integrações com o Portal Wesign.
+            </p>
+
+            <div class="text-center mt-4">
+              <a class="btn btn-custom text-white" href="./configuracao.html">
+                <i class="fas fa-share me-2"></i>
+                Acessar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Utilização -->
+      <div class="col-lg-6">
+        <div class="card feature-card h-20">
+          <div class="card-body p-4">
+            <div class="feature-icon icon-share">
+              <i class="fa-regular fa-file-lines"></i>
+            </div>
+      
+            <h3 class="card-title text-center fw-bold mb-4">Utilização</h3>
+      
+            <p class="text-muted mb-4">
+              Aprenda como utilizar o app na prática, desde cadastrar um assinante, realizar o envio de um documento e acompanhar a assinatura dos participantes.
+            </p>
+      
+            <div class="text-center mt-4">
+              <a class="btn btn-custom text-white" href="./utilizacao.html">
+                <i class="fas fa-share me-2"></i>
+                Acessar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dúvidas Frequentes -->
+      <div class="col-lg-6">
+        <div class="card feature-card h-100">
+          <div class="card-body p-4">
+            <div class="feature-icon icon-share">
+              <i class="fa-solid fa-question"></i>
+            </div>
+      
+            <h3 class="card-title text-center fw-bold mb-4">Dúvidas frequentes</h3>
+      
+            <p class="text-muted mb-4">
+              Veja as dúvidas mais comuns entre nossos usuários com nossa base de dados que é atualizada frequentemente.
+            </p>
+
+            <div class="text-center mt-4">
+              <a class="btn btn-custom text-white" href="./faq.html">
+                <i class="fas fa-share me-2"></i>
+                Acessar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Release Notes -->
+      <div class="col-lg-6">
+        <div class="card feature-card h-100">
+          <div class="card-body p-4">
+            <div class="feature-icon icon-share">
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+      
+            <h3 class="card-title text-center fw-bold mb-4">Release Notes</h3>
+      
+            <p class="text-muted mb-4">
+              Tenha acesso às novas funcionalidades e melhorias implementadas nas atualizações do app.
+            </p>
+      
+            <div class="text-center mt-4">
+              <a class="btn btn-custom text-white" href="./release-notes.html">
+                <i class="fas fa-share me-2"></i>
+                Acessar
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--
+    
+    <hr class="section-divider">
+
+    
+    <div class="row">
+      <div class="col-12">
+        <div class="card border-0" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">
+          <div class="card-body p-4">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h4 class="fw-bold text-primary mb-2">
+                  <i class="fas fa-lightbulb me-2"></i>
+                  Dicas Importantes
+                </h4>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Mantenha seus documentos sempre organizados em pastas
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Verifique as permissões antes de compartilhar arquivos sensíveis
+                  </li>
+                  <li class="mb-0">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Utilize nomes descritivos para facilitar a busca posterior
+                  </li>
+                </ul>
               </div>
-              <img class="img-custom" src="Imagens/Uso/cadastro-1.png">              
-            </section>
-
-            <hr>
-          
-            <section id="editando-assinantes">
-              <h1>Editando dados do assinante</h1>              
-              <p>Localize o registro do assinante, clique sob o registro e depois clique no botão <strong>Editar</strong>.</p>
-              <p>Os campos disponíveis para alteração serão liberados. Após a conclusão, clique em <strong>Salvar</strong>.                            
-              <img class="img-custom" src="Imagens/Uso/cadastro-2.png">
-            </section>
-
-            <hr>
-
-            <section id="removendo-assinantes">
-              <h1>Removendo o assinante</h1>              
-              <p>Localize o registro do assinante, clique sob o registro e depois clique no botão <strong>Remover</strong>.</p>
-              <p>Será exibida uma mensagem de confirmação para realizar a ação desejada.</p>
-            </section>
-          
-            <hr>
-
-            <section id="carregando-assinantes">
-              <h1>Carregando todos os assinantes</h1>              
-              <p>Por padrão, a página carrega apenas os 100 primeiros assinantes da base para garantir melhor performance. Para visualizar todos os assinantes, clique em <strong>Carregar todos os assinantes</strong>. Uma mensagem
-              de confirmação será exibida e, ao confirmar, o sistema carregará todos os registros. Esse processo pode levar alguns
-              minutos, dependendo da quantidade de dados.</p>              
-            </section>
-          
-            <hr>
-            <section id="importando-assinantes">
-              <h1>Importando assinantes</h1>              
-              <p>A opção <strong>Importar Assinantes</strong> permite informar uma planilha no formato .CSV para criação dos assinantes em lote.</p>
-              <p>Basta o usuário selecionar a opção <strong>Mais ações > Gerar layout de importação de assinantes</strong> e preencher as informações para
-                cadastro.
-              </p>
-              <p>A importação de assinantes que possuam inconsistências em seus dados (e-mail inválido, CPF inválido ou
-                duplicado, tipo de assinatura diferente do padrão aceito) serão descartados e não serão importados. </p>
-              <p>Assinantes já existentes não terão seus dados atualizados.</p>
-              <p>Preenchimento das informações.</p>
-              <ul>
-                <li><strong>Nome*:</strong> Nome do assinante. Exemplo: "Suporte Wesign".</li>
-                <li><strong>E-mail*:</strong> E-mail do assinante. Exemplo: "suportewesign@wesign.com.br".</li>
-                <li><strong>CPF*:</strong> número do CPF com pontuação. Exemplo: "123.456.789-10"</li>
-                <li><strong>Tipo de Assinatura*:</strong> Valores aceitos: <b>E</b> (Assinatura Eletrônica), <b>D</b> (Assinatura digital); <b>A</b> (Autorizador) e <b>O</b> (Observador). Exemplo: "E"</li>
-                <li><strong>Celular:</strong> celular do assinante no padrão internacional. Exemplo: "5511999999999"</li>
-                <li><strong>Título:</strong> título que será utilizado pelo assinante. Exemplo: "Analista Wesign"</li>
-                <li><strong>Empresa:</strong> empresa do assinante. Exemplo: "Wesign"</li>
-              </ul>
-              <div class="alert alert-warning col-md-2" role="alert">
-                <p>*Preenchimento obrigatório</p>
+              <div class="col-md-4 text-center">
+                <i class="fas fa-hands-helping text-primary" style="font-size: 4rem; opacity: 0.3;"></i>
               </div>
-            </section>
-          
-            <hr>
-            <section id="exporta-assinantes">
-              <h1>Exportando os assinantes</h1>              
-              <p>Para gerar uma planilha com os assinantes cadastrados, utilize a opção <strong>Mais ações > Exportar assinantes</strong>.</p>
-            </section>
-          
-            <hr>
-            <section id="excluindo-assinantes">
-              <h1>Excluindo todos assinantes</h1>              
-              <p>Para excluir todos os assinantes cadastrados, utilize a opção <strong>Mais ações > Excluir todos</strong>. </p>
-              <p>Será exibida uma mensagem de confirmação para realizar a ação desejada.</p>
-            </section>
-          </section>
-
-          <hr>
-
-          <section id="portalAssinaturas">
-            <h1>Portal de Assinaturas</h1>
-          
-            <section id="enviando-documento">
-              <h1>Enviando um documento para assinatura</h1>
-              
-              <p> Para realizar o envio de um documento para assinatura, siga os passos abaixo.</p>
-              <ol>
-                <li>
-                    
-                </li>
-                <li>
-                  <p>Selecione o documento para assinatura</p>
-                  <p>Você terá as seguintes opções disponíveis:</p>
-                  <p>                    
-                    <ul>
-                      <li>
-                        <p>
-                          <strong>Selecionar documento do GED:</strong> selecione um documento que já está publicado no GED (Documentos) da
-                          plataforma TOTVS fluig. Será exibida as pastas e documentos que o usuário possui acesso no TOTVS fluig.
-                          Após localizar o documento, basta clicar na caixa de seleção ao lado do nome do
-                          documento e depois clicar em <strong>Selecionar</strong>
-                        </p>
-                        <img class="img-custom" src="Imagens/Uso/portal-2.png">
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Selecionar documento do computador:</strong> selecione um documento que esteja em seu computador
-                          e posteriormente, selecione a pasta do GED onde esse documento será publicado automaticamente. Após
-                          localizar o documento, basta clicar na caixa de seleção ao lado do nome do documento e depois clicar em
-                          <strong>Selecionar</strong>.
-                        </p>
-                        <img class="img-custom" src="Imagens/Uso/portal-3.png">
-                      </li>
-                    </ul>
-                    <div class="alert alert-warning col-md-10" role="alert">
-                      <p>Não publique documento em uma pasta que esteja restrita ao papel de <strong>admin</strong> do TOTVS fluig.
-                        Caso isso seja feito, o documento não será enviado pois não será possível ler o conteúdo do arquivo.</p>
-                      <p>
-                    </div>
-                  </p>
-                </li>
-                <li>
-                  <p>Informe os participantes do fluxo de assinatura</p>
-                  <p>Clique no botão <strong>Adicionar Assinante</strong></p>
-                  <img class="img-custom" src="Imagens/Uso/portal-4.png">
-                  <p>Informe os dados do participante do documento. Os participantes incluídos não serão cadastrados
-                    no <strong>Cadastro de Assinantes</strong> e não é necessário cadastrar um participante para incluir no fluxo de assinaturas. Os dados
-                    abaixo devem ser preenchidos. </p>
-                  <ul>
-                    <li><strong>Selecione o assinante:</strong> selecione assinantes já cadastrados na página <strong>Cadastro
-                        de Assinantes</strong>. Após selecionado, seus dados serão preenchidos automaticamente nos respectivos
-                      campos;</li>
-                    <li><strong>Etapa (obrigatório):</strong> informe a etapa que o assinante deve assinar. Se não existir ordem
-                      de assinatura, então, por padrão, deixe a etapa como “1”. Caso exista ordem para assinaturas, informe a
-                      etapa que o assinante deve assinar. Por exemplo, o “Assinante 1” deve assinar antes do “Assinante 2” e
-                      “Assinante 3”, então o “Assinante 1” ficará na etapa 1, e o “Assinante 2” e “Assinante 3” ficarão na etapa
-                      2. Caso seja necessário adicionar mais etapas, basta clicar no botão “Incluir nova etapa”;</li>
-                    <li><strong>E-mail (obrigatório):</strong> e-mail do assinante que receberá o link de assinatura e
-                      notificações de conclusão do processo de assinatura;</li>
-                    <li><strong>CPF (opcional):</strong> CPF do assinante;</li>
-                    <li><strong>Título (opcional):</strong> nomenclatura opcional utilizada para identificar o assinante no
-                      processo de assinaturas e no manifesto, por exemplo, “Cliente”, “Representante da empresa X”, “Diretor
-                      Financeiro”, “Gerente”, etc.</li>
-                    <li><strong>Tipo de Assinatura (obrigatório):</strong> escolher o tipo de assinatura que o assinante
-                      utilizará no fluxo de assinaturas. Veja o detalhamento de cada opção <a class="link-default" href="./index.html#cadastrando-assinantes">aqui</a> .
-                    </li>
-                    <li><strong>Tipo de Autenticação (obrigatório):</strong>Essa funcionalidade garante maior segurança
-                    no processo de assinatura eletrônica, evitando que o documento possa ser assinado por
-                    outra pessoa que tenha obtido acesso ao link de assinatura do assinante.
-                    Os tipos de autenticação disponíveis são:
-                      <p> 
-                        <ul>
-                          <li><strong>E-mail</strong>:Recebimento da solicitação de assinatura por e-mail, permitindo que a
-                          assinatura seja realizada diretamente no e-mail recebido.</li>
-                          <li><strong>E-mail e SMS</strong>:Permite que a assinatura seja realizada diretamente no e-mail
-                          recebido, além de exigir uma confirmação com código via SMS.</li>
-                          <li><strong>SMS</strong>:A confirmação da assinatura é autenticada diretamente por meio do SMS.</li>
-                          <li><strong>E-mail e WhatsApp</strong>:Permite que a assinatura seja realizada diretamente no e-mail
-                          recebido, além de exigir uma confirmação com código via WhatsApp.</li>
-                          <li><strong>WhatsApp</strong>:Recebimento do link de assinatura diretamente pelo WhatsApp. A
-                          confirmação da assinatura é autenticada diretamente no WhatsApp.</li>
-                          <li><strong>E-mail e Aplicativo Autenticador (Google Authenticator):</strong>:Permite que a assinatura
-                          seja realizada diretamente no e-mail recebido, além de exigir uma confirmação com
-                          código via aplicativo autenticador (Google Authenticator).</li>
-                          <li><strong>E-mail e Selfie</strong>:Permite que a assinatura seja realizada diretamente no e-mail
-                          recebido. A assinatura eletrônica só poderá prosseguir após a habilitação da
-                          câmera para tirar uma selfie. Caso a câmera não seja habilitada, o participante só
-                          poderá continuar a assinatura utilizando o certificado digital.</li>
-                          <li><strong>E-mail e PIX</strong>:Permite que a assinatura seja realizada diretamente no e-mail
-                          recebido, com solicitação de um segundo fator via PIX para confirmação. Será
-                          cobrado um valor simbólico para a confirmação, que será estornado após a
-                          autenticação.</li>
-                        </ul>
-                      </p>
-                    </li>
-                    <li>
-                      <strong>Celular:</strong> informe o número no padrão internacional, incluindo código do país e DDD. Exemplo: 5511912345678. 
-                        Necessário apenas para os tipos de autenticação que utilizam número de celular para notificação.                        
-                    </li>
-                  </ul>
-                  <p>Após informado os dados, clique em <strong>Concluir</strong> <img class="img-custom" src="Imagens/Uso/portal-4.png">. </p>
-                  <p>Informe todos os participantes do documento e clique em <strong>Concluir</strong> <img class="img-custom" src="Imagens/Uso/portal-4.png">
-                  </p>
-                  <p>Para enviar o documento, clique no botão <strong>Enviar</strong>.</p>
-                  <img class="img-custom" src="Imagens/Uso/portal-7.png">
-                  <p>Após o documento ser enviado para assinatura, todos os participantes relacionados no documento receberão um
-                    e-mail de notificação informando sobre a necessidade de realizar a assinatura no documento. Quando o documento for completamente assinado, ou seja, quando não
-                    houver mais assinaturas pendentes, todos os participantes receberão um e-mail informando a conclusão do documento e o manifesto de assinatura.</p>
-                  
-                </li>
-              </ol>
-              
-              <div class="alert alert-warning col-md-10" role="alert">
-                <p>Sempre verifique no <strong>Quadro de Status</strong> se o documento foi integrado e está com status de <strong>Pendente</strong>.</p>
-                <p>Documentos que ficam com status de <strong>Enviando</strong> não foram integrados e você pode consultar o posicionando o mouse sob o ícone.</p>
-                <p>Caso tenha dúvidas sobre o erro, contate o <strong>Suporte Wesign</strong> para maiores informações.</p>
-                <img class="img-custom" src="Imagens/Uso/portal-8.png">
-              </div>
-              
-              <div class="alert alert-warning col-md-10" role="alert">
-                <p>Caso o alerta do navegador seja exibido no processo de envio do(s) documento(s), clique em
-                  <strong>Aguarde</strong>. Normalmente essa mensagem é exibida quando documentos pesados ou vários documentos
-                  estão sendo enviados ao mesmo tempo.
-                </p>
-                <img src="Imagens/Uso/portal-de-assinaturas-enviando-1.png">
-              </div>
-            </section>
-          </section>
-          <hr>
-
-          <section id="quadrodeStatus">
-            <h1>Quadro de Status</h1>
-            
-            <section id="modo-utilizacao">
-              <h1> Modo de utilização</h1>
-              <hr>
-              <p>Através do <strong>Quadro de Status</strong> é possível que o usuário visualize todos os documentos enviados, porém,
-                ele não poderá visualizar o conteúdo de um arquivo caso não tenha permissão no GED (Documentos) do TOTVS Fluig. Todas as regras
-                de segurança do GED (Documentos) serão respeitadas no que diz respeito à visualização do conteúdo de um documento. As
-                ações do documento (<strong> Notificar assinantes pendentes, Incluir novo assinante, Cancelar assinatura, Descartar
-                  assinante, Compartilhar link de assinatura</strong>) só estarão disponíveis  para o remetente do documentou e usuários no papel
-                <strong>admin</strong>.
-              </p>
-              <img src="Imagens/Uso/quadro-1.png">
-              <p>É possível realizar um filtro nos documentos exibidos no <strong>Quadro de Status</strong>.
-                Ao abrir a tela, nenhum registro será carregado. Somente após o preenchimento dos dados e a execução que
-                serão disponibilizados os dados em tela. Pode-se realizar a busca nos documentos com os seguintes
-                parâmetros:
-              <ul>
-                <li> <strong>Data de Envio:</strong> data em que o documento foi enviado. Por padrão, sempre trará o
-                  primeiro dia do mês corrente até a data atual de execução;</li>
-                <li><strong>Status do documento:</strong> busque apenas os documentos com o status desejado. Por padrão,
-                  tratá “Todos”, que são todos os status disponíveis;</li>
-                <li><strong>Remetente:</strong> busque documentos que um remetente específico enviou. Por padrão, trará o
-                  usuário corrente como “Remetente”;</li>
-                <li><strong>Código do documento:</strong> busque o documento pelo seu ID no GED. Se não informado, buscará
-                  todos os documentos. Por padrão, o valor será deixado em branco;</li>
-                <li> <strong>Nome do documento:</strong> busque o documento por palavras que contenham em seu nome. Se não
-                  informado, buscará todos os documentos. Por padrão, o valor será deixado em branco;</li>                
-              </ul>
-              <p>Cada aba representa um status de documento diferente. Clique na aba desejada para visualizar os documentos.
-              </p>
-              <p>Os documentos com status de <strong>Pendente</strong> podem ser atualizados no <strong>Quadro de Status</strong>
-                das seguintes formas:</p>
-              <ul>
-                <li>Através <a class="link-default" href="/.configuracao.html#datasets-sincronizados">datasets sincronizados</a></li>
-                <li>Através <a class="link-default" href="./configuracao.html#callback">Callback</a></li>
-                <li>Ações do documento</li>
-              </ul>
-              <p>No <strong>Quadro de Status</strong> é possível visualizar o status da assinatura de cada assinante.
-                A exibição dos status estarão disponíveis caso o Serviço Callback esteja ativo.</p>
-              <div class="alert alert-warning col-md-10" role="alert">
-                <p>O status do assinante é atualizado somente pelo serviço de <a class="link-default"
-                    href="./configuracao.html#callback">Callback</a>.
-                  Caso identifique que um assinante com o status desatualizado, isso não influencia no fluxo de assinaturas do
-                  documento e nas notificações de pendência enviadas por e-mail.</p>
-                <p>O status do assinante será corrigido automaticamente quando o documento for completamente assinado e seu manifesto
-                  gerado.</p>
-              </div>
-              <p>Após pesquisar os documentos, na aba <strong>Pendente</strong>, na coluna <strong>Assinantes</strong>, ao clicar no botão com o número de assinantes, é
-                possível realizar as seguintes ações no documento:</p>              
-              <ul>
-                <li><strong>Notificar assinantes pendentes:</strong> Permite reenviar o e-mail de assinatura para os
-                  assinantes que ainda estão pendentes.</li>
-                <li><strong>Gerar manifesto:</strong> Verifica no Portal Wesign se o documento foi assinado e gera seu manifesto.</li>
-                <li><strong>Assinar documento:</strong> Caso o e-mail do usuário logado no fluig seja o mesmo que um dos
-                  assinantes, é possível realizar a assinatura clicando nesse botão.</li>
-                <li><strong>Incluir novo assinante:</strong> Permite adicionar mais assinantes no fluxo de assinatura do
-                  documento.</li>
-                <li><strong>Cancelar assinatura:</strong> Permite cancelar a assinatura do documento. Também é possível
-                  cancelar através da widget Portal de Assinaturas</li>
-              </ul>
-              <p>Também existem ações que podem ser tomadas para cada assinante. Clique no botão <strong>Ações</strong>:</p>
-              <ul>
-                <li><strong>Compartilhar link de assinatura:</strong> Permite compartilhar o link de assinatura do
-                  signatário.</li>
-                <li><strong>Descartar assinante:</strong> Permite remover o assinante do fluxo de assinatura do documento.
-                </li>
-                <li><strong>Motivo:</strong> Caso o assinante tenha rejeitado o documento, é possível visualizar o seu
-                  motivo de rejeição.</li>
-              </ul>
-              <p>Você pode ver as informações do assinante de forma resumida, como o tipo de autenticação utilizado e o horário de assinatura, clicando no botão <strong>Detalhes</strong></p>
-            </section>
-            
-            <section id="notificando-assinante">
-              <h1>Notificando os assinantes pendente de assinatura</h1>
-              <hr>
-              <p>Para enviar um e-mail informando a pendência de assinatura do documento, realize o procedimento abaixo.</p>
-              <ul>
-                <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna
-                  <strong>Assinantes</strong>, clique no botão número de assinantes.
-                </li>
-                <li>Clique em <strong>Notificar assinantes pendente</strong> e aguarde a mensagem de conclusão.</li>
-              </ul>
-              <img src="Imagens/Uso/quadro-3.png">
-              <div class="alert alert-warning col-md-10" role="alert">
-                <p><strong>A notificação será enviada somente para os participantes que ainda não assinaram, de acordo com o status informado no
-                Portal Wesign.</strong></p>
-                <p>O sistema consulta o status de assinatura diretamente no Portal Wesign.</p>
-                <p>O status exibido no TOTVS Fluig não é considerado para o envio da notificação.</p>
-                <p>Ou seja, mesmo que no TOTVS Fluig apareça que a assinatura está pendente, se no Portal Wesign constar que o participante
-                já assinou, <strong>a notificação não será enviada</strong>.</p>
-              </div>
-            </section>
-
-            <section id="gerar-manifesto">
-              <h1>Gerar manifesto</h1>
-              <hr>
-              <p>Será verificado no Portal Wesign se o documento foi concluído e não há assinaturas pendentes.
-                Se o documento estiver concluído, o manifesto de assinaturas será gerado e o status do documento será atualizado para <strong>Assinado</strong>.
-              </p>              
-              <img src="Imagens/Uso/quadro-5.png">
-            </section>
-            
-            <section id="assinar-documento">
-              <h1>Assinar documento</h1>
-              <hr>
-              <p>O participante pode assinar o documento diretamente pelo fluig. Ao selecionar essa opção, abrirá uma nova
-                página do navegador em que redireciona para o Portal de Assinaturas, onde o participante realizará a
-                assinatura. Essa opção só está disponível se o e-mail do usuário logado no fluig for igual ao e-mail de um
-                dos participantes. Para isso, realize o procedimento abaixo.</p>
-              <ul>
-                <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna Assinantes, clique
-                  no número de assinantes.</li>
-                <li>Clique em <strong>Assinar documento</strong> e abrirá uma nova janela no navegador para assinatura do
-                  documento.</li>
-              </ul>
-              <img src="Imagens/Uso/quadro-5.png">
-            </section>
-            
-            <section id="incluindo-assinante">
-              <h1>Incluindo assinante</h1>
-              <hr>
-              <p>Após o documento ter sido enviado para assinatura, pode ser necessário incluir novos participantes no fluxo
-                de assinatura. Para isso, realize o procedimento abaixo.</p>
-              <ul>
-                <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna Assinantes, clique
-                  no número de assinantes.</li>
-                <li>Clique em <strong>Incluir novo assinante</strong> para informar quais participantes serão incluídos no
-                  fluxo de assinatura do documento. Após selecionar os usuários desejados, clique em
-                  <strong>Concluir</strong>. Após todos os participantes terem sido informados, clique em
-                  <strong>Enviar</strong>.
-                </li>
-              </ul>
-              <img src="Imagens/Uso/quadro-6.png">              
-            </section>
-            
-            <section id="cancelando-documento">
-              <h1>Cancelando um documento</h1>
-              <hr>
-              <p>Para cancelar um documento, realize o procedimento abaixo.</p>
-              <ul>
-                <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna
-                  <strong>Assinantes</strong>, clique no número de assinantes.
-                </li>
-                <li>Selecione a opção <strong>Cancelar Assinatura</strong> e aguarde a mensagem de conclusão.</li>
-              </ul>
-              <img src="Imagens/Uso/quadro-7.png">
-            </section>
-
-            <section id="descartando-assinante">
-              <h1>Descartar um assinante</h1>
-              <hr>
-              <p>Para descartar a participação de um assinante, realize o procedimento abaixo. </p>
-              <ul>
-                <li>Realize a busca do documento e o localize na aba <strong>Pendente</strong>, na coluna
-                  <strong>Assinantes</strong>, clique no número de assinantes.
-                </li>
-                <li>Localize o assinante desejado e clique no botão <strong>Ações</strong>.</li>
-                <li>Selecione a opção <strong>Descartar assinante</strong> e aguarde a mensagem de conclusão.</li>
-              </ul>
-              <img src="Imagens/Uso/quadro-8.png">
-            </section>
-            
-            
-            
-            <section id="verificando-documento">
-              <h1>Verificando o manifesto do documento assinado</h1>
-              <hr>              
-              <p>
-                O <strong>Manifesto de Assinaturas</strong> é um registro formal ou documento auxiliar que lista e descreve as assinaturas 
-                aplicadas a um determinado documento digital.
-              </p>
-              <p>
-                Ele serve como uma prova de que o processo de assinatura ocorreu, indicando quem assinou, quando assinou, qual o tipo de
-                assinatura utilizada (e.g., simples, avançada, qualificada) e qual documento foi assinado, além de
-                recolher outras evidências, como dados de geolocalização onde a assinatura foi realizada e a imagem da assinatura eletrônica.
-              </p>
-              <p>Após o documento ser concluído, o status do documento no <strong>Quadro de Status</strong> será atualizado para <strong>Assinado</strong>.</p>
-              <p>O manifesto será inserido como anexo no documento original no GED (Documentos) do TOTVS fluig. Podem ocorrer casos
-                em que ele não se encontre como anexo, mas esteja na mesma pasta do documento
-                original. Nesse caso, basta baixar o documento em sua máquina e anexar no documento original. Para verificar
-                o manifesto, realize o procedimento abaixo.</p>
-              <ul>
-                <li>Realize a busca do documento e verifique a aba <strong>Assinado;</strong></li>
-                <li>Após localizar o documento, clique no <strong>Código</strong> do documento;</li>
-                <li>Você será redirecionado para o documento no GED (Documentos);</li>
-                <li>Localize no canto superior direito a opção <strong>Ações do Documento > Ver anexos</strong>;</li>
-                <li>Clique no nome do manifesto para baixá-lo em seu computador;</li>
-                <li>Após baixar, basta extrair o arquivo e terá todas as evidências.</li>
-              </ul>
-              <img src="Imagens/Uso/quadro-9.png">
-            </section>
-            
-            <section id="excluindo-documento">
-              <h1>Excluindo documento do GED</h1>
-              <hr>
-              <p>Caso um documento que esteja com status <strong>Enviando para assinatura</strong> seja excluído do GED (Documentos) do
-                TOTVS fluig, a rotina de envio para assinatura irá detectar a exclusão do mesmo e interromper o processo de envio
-                para o Portal Wesign.</p>
-              <p>Se o documento já foi assinado, o manifesto de assinaturas será direcionado para
-                a pasta <strong>Excluídos</strong>. Por exemplo, um documento é enviado para assinatura, ele é
-                assinado, mas ao retornar o manifesto para o TOTVS fluig é identificado que o documento original foi excluído no GED (Documentos).
-                Dessa forma não será possível anexar o manifesto. Então o manifesto será criado na pasta
-                <strong>Excluídos</strong> junto com o documento original.
-              </p>              
-            </section>
-            
-            <section id="extraindo-relatorio">
-              <h1>Extraindo relatório</h1>
-              <hr>
-              <p>Para extrair uma planilha do Excel com os dados do documento, realize o procedimento abaixo.</p>
-              <ul>
-                <li>Realize a busca dos documentos, informando os filtros desejados;</li>
-                <li>Na primeira aba, onde fica o gráfico geral de documentos, localize a opção <strong> Mais ações >
-                    Exportar</strong>;</li>
-                <li>Será gerado uma planilha Excel com dados básicos para gerenciar as informações.</li>
-              </ul>
-            </section>          
-          </section>      
-        </main>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+    -->
+  </div>
+
+
+</body>
 
 </html>
