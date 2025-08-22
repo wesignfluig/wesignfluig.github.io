@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/headers.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
@@ -24,15 +25,28 @@
 
   <body>
 
-    <header class="navbar sticky-top flex-md-nowrap p-0 shadow d-flex justify-content-center py-3 bg-white">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="instalacao.html" class="nav-link" aria-current="page">Instalação</a></li>
-        <li class="nav-item"><a href="configuracao.html" class="nav-link">Configuração</a></li>
-        <li class="nav-item"><a href="index.html" class="nav-link active">Utilização</a></li>
-        <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-        <li class="nav-item"><a href="release-notes.html" class="nav-link">Release Notes</a></li>
-      </ul>
-    </header>
+    <div class="header-section">
+      <div class="container">
+    
+        <a href="./index.html">
+          <img fetchpriority="high" sizes="142px" src="Imagens/wesign/wesign-logo.avif" width="142" height="62">
+        </a>
+    
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1 class="display-4 fw-bold mb-3">
+             Utilização do app Wesign fluig
+            </h1>
+            <p class="lead mb-0">
+              Aprenda tudo sobre a utilização do app no TOTVS Fluig.
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="fas fa-rocket" style="font-size: 5rem; opacity: 0.3;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="container-fluid">
       <div class="row">
@@ -170,215 +184,191 @@
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
           <section id="cadastroAssinantes">
-            <h1>Cadastro de assinantes</h1>
             
-
             <section id="cadastrando-assinantes" class="manual-section">
-              <h2>Como cadastrar um assinante</h2>
-              <p>
-                Para agilizar o processo de envio de documentos para assinatura, o app permite que você cadastre participantes
-                frequentes na base de dados do TOTVS fluig.
-              </p>
-              <p> Para cadastrar um assinante, acesse <strong> Wesign > Cadastro de Assinantes. </strong></p>
-              <div class="advantages-section">
-                <h3 class="section-title">                  
-                  <span class="icon">✅</span> Vantagens do cadastro
-                </h3>
-              
-                <p>Ao cadastrar um participante:</p>
-              
-                <ul class="advantages-list">
-                  <li>Você não precisa digitar os dados dele (como nome, e-mail e CPF) a cada novo envio.</li>
-                  <li>O preenchimento dos campos será feito automaticamente sempre que esse participante for selecionado.</li>
-                </ul>
-              </div>
-              <div class="warning-section">
-                <h3 class="section-title warning">
-                  <span class="icon">⚠️</span>
-                  Observação Importante
-                </h3>
-              
-                <p class="warning-text">
-                  O cadastro de participantes <span class="highlight">não é obrigatório.</span>
-                  Você pode enviar documentos para assinatura <span class="highlight">mesmo sem realizar o cadastro prévio</span>do
-                  assinante.
-                </p>
-              </div>
-
-              <h1 class="main-title">                
-                Dados do Assinante: Campos Disponíveis e Suas Finalidades
-              </h1>
-
-              <p class="intro-text">
-                Ao cadastrar um assinante para envio de documentos, você precisará preencher algumas informações. Abaixo,
-                explicamos cada campo disponível e seu objetivo:
-              </p>
-
-              <div class="field-item">
-                <div class="field-header">
-                  <span class="field-icon">🔹</span>
-                  <span class="field-name">Nome</span>
-                  <span class="field-requirement required">(obrigatório)</span>
-                </div>
-                <div class="field-description">
-                  Informe o <span class="highlight">nome completo do assinante</span>. Esse dado será exibido durante o
-                  processo de assinatura e nos registros associados.
-                </div>
-              </div>
-              
-              <div class="field-item">
-                <div class="field-header">
-                  <span class="field-icon">🔹</span>
-                  <span class="field-name">E-mail</span>
-                  <span class="field-requirement required">(obrigatório)</span>
-                </div>
-                <div class="field-description">
-                  Endereço de e-mail do assinante. É por meio desse e-mail que ele receberá:
-                  <ul class="field-list">
-                    <li>O <span class="highlight">link para acessar e assinar</span> o documento;</li>
-                    <li>As <span class="highlight">notificações de conclusão</span> do processo de assinatura.</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div class="field-item">
-                <div class="field-header">
-                  <span class="field-icon">🔹</span>
-                  <span class="field-name">CPF</span>
-                  <span class="field-requirement required">(obrigatório)</span>
-                </div>
-                <div class="field-description">
-                  Número do <span class="highlight">CPF do assinante</span>. Esse dado é utilizado para validar a
-                  identidade da pessoa durante o fluxo de assinatura.
-                </div>
-              </div>
-              
-              <div class="field-item">
-                <div class="field-header">
-                  <span class="field-icon">🔹</span>
-                  <span class="field-name">Celular</span>
-                  <span class="field-requirement optional">(opcional)</span>
-                </div>
-                <div class="field-description">
-                  Número de celular do assinante, utilizado <span class="highlight">apenas quando for necessário
-                    autenticar</span> o assinante por SMS.
-              
-                  <div class="important-note">
-                    <p><span class="highlight">Importante:</span> O número deve ser informado no <span class="highlight">formato
-                        internacional</span>, incluindo o código do país.</p>
-                  </div>
-              
-                  <div class="example-text">
-                    Exemplo: +55 11 91234-5678
-                  </div>
-                </div>
-              </div>
-              
-              <div class="field-item">
-                <div class="field-header">
-                  <span class="field-icon">🔹</span>
-                  <span class="field-name">Título</span>
-                  <span class="field-requirement optional">(opcional)</span>
-                </div>
-                <div class="field-description">
-                  Você pode atribuir um <span class="highlight">título ou função ao assinante</span>, como forma de
-                  identificação no processo.
-              
-                  <div class="examples-list">
-                    <strong>Exemplos:</strong>
-                    <ul>
-                      <li>Cliente</li>
-                      <li>Representante da empresa X</li>
-                      <li>Diretor Financeiro</li>
-                      <li>Gerente</li>
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Como cadastrar um assinante</h2>
+                  <p class="card-text">
+                    Para agilizar o processo de envio de documentos para assinatura, o app permite que você cadastre assinantes
+                    frequentes na base de dados do TOTVS fluig.
+                  </p>
+                  <p class="card-text"> Para cadastrar um assinante, acesse <strong> Wesign > Cadastro de Assinantes. </strong></p>
+                  <div class="advantages-section">
+                    <h3 class="section-title">
+                      <i class="fa-solid fa-circle-check icon"></i> Vantagens do cadastro
+                    </h3>
+                  
+                    <p>Ao cadastrar um assinante:</p>
+                  
+                    <ul class="advantages-list">
+                      <li>Você não precisa digitar os dados dele (como nome, e-mail e CPF) a cada novo envio.</li>
+                      <li>O preenchimento dos campos será feito automaticamente sempre que esse assinante for selecionado.</li>
                     </ul>
                   </div>
-              
-                  Esse título será exibido durante o processo de assinatura e no manifesto final.
+                  <div class="warning-section">
+                    <h3 class="section-title warning">
+                      <i class="fa-solid fa-triangle-exclamation icon"></i>
+                      Observação Importante
+                    </h3>
+                  
+                    <p class="warning-text">
+                      O cadastro de assinantes <span class="highlight">não é obrigatório.</span>
+                      Você pode enviar documentos para assinatura <span class="highlight">mesmo sem realizar o cadastro prévio</span>do
+                      assinante.
+                    </p>
+                  </div>
+                  
+                  <h4 class="card-title"> Dados do Assinante: Campos Disponíveis e Suas Finalidades </h4>                  
+                  
+                  <p class="card-text">
+                    Ao cadastrar um assinante para envio de documentos, você precisará preencher algumas informações. Abaixo,
+                    explicamos cada campo disponível e seu objetivo:
+                  </p>
+                  
+                  <div class="field-item">
+                    <div class="field-header">
+                      <span class="field-icon">🔹</span>
+                      <span class="field-name">Nome</span>
+                      <span class="field-requirement required">(obrigatório)</span>
+                    </div>
+                    <div class="field-description">
+                      Informe o <span class="highlight">nome completo do assinante</span>. Esse dado será exibido durante o
+                      processo de assinatura e nos registros associados.
+                    </div>
+                  </div>
+                  
+                  <div class="field-item">
+                    <div class="field-header">
+                      <span class="field-icon">🔹</span>
+                      <span class="field-name">E-mail</span>
+                      <span class="field-requirement required">(obrigatório)</span>
+                    </div>
+                    <div class="field-description">
+                      Endereço de e-mail do assinante. É por meio desse e-mail que ele receberá:
+                      <ul class="field-list">
+                        <li>O <span class="highlight">link para acessar e assinar</span> o documento;</li>
+                        <li>As <span class="highlight">notificações de conclusão</span> do processo de assinatura.</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="field-item">
+                    <div class="field-header">
+                      <span class="field-icon">🔹</span>
+                      <span class="field-name">CPF</span>
+                      <span class="field-requirement required">(obrigatório para brasileiros)</span>
+                    </div>
+                    <div class="field-description">
+                      Número do <span class="highlight">CPF do assinante</span>. Esse dado é utilizado para validar a
+                      identidade da pessoa durante o fluxo de assinatura. Se for um estrangeiro, o campo pode ser deixado em branco.
+                    </div>
+                  </div>
+                  
+                  <div class="field-item">
+                    <div class="field-header">
+                      <span class="field-icon">🔹</span>
+                      <span class="field-name">Celular</span>
+                      <span class="field-requirement optional">(opcional)</span>
+                    </div>
+                    <div class="field-description">
+                      Número de celular do assinante, utilizado <span class="highlight">apenas quando for necessário
+                        autenticar</span> o assinante por um método de autenticação que envolva seu celular.
+                  
+                      <div class="important-note">
+                        <p><span class="highlight">Importante:</span> O número deve ser informado no <span class="highlight">formato
+                            internacional</span>, incluindo o código do país.</p>
+                      </div>
+                  
+                      <div class="example-text">
+                        Exemplo: 5511912345678
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="field-item">
+                    <div class="field-header">
+                      <span class="field-icon">🔹</span>
+                      <span class="field-name">Título</span>
+                      <span class="field-requirement optional">(opcional)</span>
+                    </div>
+                    <div class="field-description">
+                      Você pode atribuir um <span class="highlight">título ou função ao assinante</span>, como forma de
+                      identificação no fluxo de assinaturas.
+                  
+                      <div class="examples-list">
+                        <strong>Exemplos:</strong>
+                        <ul>
+                          <li>Cliente</li>
+                          <li>Representante da empresa X</li>
+                          <li>Diretor Financeiro</li>
+                          <li>Gerente</li>
+                        </ul>
+                      </div>
+                  
+                      Esse título será exibido durante o processo de assinatura e no manifesto final.
+                    </div>
+                  </div>
+                  
+                  <div class="field-item">
+                    <div class="field-header">
+                      <span class="field-icon">🔹</span>
+                      <span class="field-name">Empresa</span>
+                      <span class="field-requirement optional">(opcional)</span>
+                    </div>
+                    <div class="field-description">
+                      Nome da empresa à qual o assinante pertence.<br><br>
+                      Este campo <span class="highlight">não interfere no fluxo de assinatura</span>, mas serve como
+                      <span class="highlight">identificador interno</span> dentro do TOTVS Fluig.
+                    </div>
+                  </div>
+                  
+                  <div class="field-item">
+                    <div class="field-header">
+                      <span class="field-icon">🔹</span>
+                      <span class="field-name">Tipo de Assinatura</span>
+                      <span class="field-requirement required">(obrigatório)</span>
+                    </div>
+                    <div class="field-description">
+                      <p>
+                        Selecione o <span class="highlight">tipo de assinatura</span> que o assinante utilizará. As
+                        opções disponíveis são:
+                      </p>
+
+                      <span class="field-name">Assinatura digital</span>
+                      <p>A assinatura digital utiliza um Certificado Digital ICP Brasil para comprovar a autoria da assinatura. A
+                        assinatura digital garante autenticidade, integridade e não repúdio (signatário não tem como negar sua
+                        autoria). O Certificado Digital é a identidade digital da pessoa física e jurídica no meio eletrônico. É
+                        validado presencialmente, não permitindo fraudes. Se você necessita mandar documentos para fora de sua rede,
+                        é fundamental que haja confiança pública para que a assinatura seja automaticamente aceita pelos diferentes
+                        órgãos e empresas. Nesse caso, a assinatura digital é mais conveniente, pois possui a mesma validade
+                        jurídica de um documento com firma reconhecida em cartório.</p>
+                      
+                      <span class="field-name">Assinatura eletrônica</span>
+                      <p>A assinatura eletrônica coleta evidências para comprovar a autoria da assinatura em um documento e não
+                        utiliza um Certificado Digital. Estas evidências são coletadas no momento da assinatura. O Portal coleta
+                        três principais: a grafia do signatário (com uma caneta touch, dedo, mouse ou a imagem digitalizada), IP da
+                        máquina e geolocalização. A assinatura eletrônica viabiliza a migração de ações do dia a dia da empresa do
+                        meio físico para o digital, reduzindo custos operacionais e poupando tempo. Se você necessita apenas deixar
+                        de usar papel e agilizar os processos, então conformidade e confiança não devem ser um problema, e a
+                        assinatura eletrônica pode ser considerada.</p>
+
+                      <span class="field-name">Autorizador</span>                      
+                      <p>O usuário autorizador terá a opção de negar ou autorizar um documento, sendo assim, possui uma ação e o
+                        documento só é finalizado após todos os participantes finalizarem suas ações. Caso o autorizador negue, o
+                        documento é bloqueado só sendo permitido desbloquear com um usuário administrador ou remetente.</p>
+                    
+                      <span class="field-name">Observador</span>                      
+                      <p>É um participante do fluxo sem nenhuma ação no mesmo, ou seja, não irá assinar. O usuário receberá
+                        notificações sobre o documento e terá permissão para visualiza-lo.</p>
+                    </div>
+                  </div>
+
+                  <img class="img-custom" src="Imagens/Uso/cadastro-1.png">
                 </div>
               </div>
-              
-              <div class="field-item">
-                <div class="field-header">
-                  <span class="field-icon">🔹</span>
-                  <span class="field-name">Empresa</span>
-                  <span class="field-requirement optional">(opcional)</span>
-                </div>
-                <div class="field-description">
-                  Nome da empresa à qual o assinante pertence.<br><br>
-                  Este campo <span class="highlight">não interfere no fluxo de assinatura</span>, mas serve apenas como
-                  <span class="highlight">identificador interno</span> dentro da plataforma (por exemplo, no Fluig).
-                </div>
-              </div>
-              
-              <div class="field-item">
-                <div class="field-header">
-                  <span class="field-icon">🔹</span>
-                  <span class="field-name">Tipo de Assinatura</span>
-                  <span class="field-requirement required">(obrigatório)</span>
-                </div>
-                <div class="field-description">
-                  Selecione o <span class="highlight">tipo de assinatura eletrônica</span> que o assinante utilizará. As
-                  opções disponíveis serão detalhadas mais adiante neste manual.
-                </div>
-              </div>
 
-
-
-
-
-
-
-
-
-
-
-
-              <p>Os dados utilizados são:</p>
-              <ul>
-                <li><strong>Nome*:</strong> nome do assinante.</li>
-                <li><strong>E-mail*:</strong> e-mail do assinante que receberá o link de assinatura e
-                  notificações de conclusão do processo de assinatura</li>
-                <li><strong>CPF*:</strong> CPF do assinante.</li>
-                <li><strong>Celular:</strong> Celular do assinante que receberá notificações quando selecionado tipo de autenticação no envio do documento.
-                Deve ser informado no padrão internacional, incluindo o código do país. </li>
-                <li><strong>Título:</strong> nomenclatura opcional utilizada para identificar o assinante no
-                  processo de assinaturas e no manifesto, por exemplo, “Cliente”, “Representante da empresa X”, “Diretor
-                  Financeiro”, “Gerente”.</li>
-                <li><strong>Empresa:</strong> nome da empresa do assinante. Utilizado para facilitar a identificação do assinante no envio de documento.
-                  Esse dado não é utilizado no fluxo de assinaturas, servindo apenas de identificador no fluig.</li>
-                <li><strong>Tipo de Assinatura*:</strong> escolher o tipo de assinatura que o assinante
-                  utilizará no fluxo de assinaturas. Abaixo, mais detalhes sobre as opções disponíveis:</li>
-              </ul>
-              <h5>Assinatura digital</h5>
-              <p>A assinatura digital utiliza um Certificado Digital ICP Brasil para comprovar a autoria da assinatura. A
-                assinatura digital garante autenticidade, integridade e não repúdio (signatário não tem como negar sua
-                autoria). O Certificado Digital é a identidade digital da pessoa física e jurídica no meio eletrônico. É
-                validado presencialmente, não permitindo fraudes. Se você necessita mandar documentos para fora de sua rede,
-                é fundamental que haja confiança pública para que a assinatura seja automaticamente aceita pelos diferentes
-                órgãos e empresas. Nesse caso, a assinatura digital é mais conveniente, pois possui a mesma validade
-                jurídica de um documento com firma reconhecida em cartório.</p>
-              <h5>Assinatura eletrônica</h5>
-              <p>A assinatura eletrônica coleta evidências para comprovar a autoria da assinatura em um documento e não
-                utiliza um Certificado Digital. Estas evidências são coletadas no momento da assinatura. O Portal coleta
-                três principais: a grafia do signatário (com uma caneta touch, dedo, mouse ou a imagem digitalizada), IP da
-                máquina e geolocalização. A assinatura eletrônica viabiliza a migração de ações do dia a dia da empresa do
-                meio físico para o digital, reduzindo custos operacionais e poupando tempo. Se você necessita apenas deixar
-                de usar papel e agilizar os processos, então conformidade e confiança não devem ser um problema, e a
-                assinatura eletrônica pode ser considerada.</p>
-              <h5>Autorizador</h5>
-              <p>O usuário autorizador terá a opção de negar ou autorizar um documento, sendo assim, possui uma ação e o
-                documento só é finalizado após todos os participantes finalizarem suas ações. Caso o autorizador negue, o
-                documento é bloqueado só sendo permitido desbloquear com um usuário administrador ou remetente.</p>
-              <h5>Observador</h5>
-              <p>É um participante do fluxo sem nenhuma ação no mesmo, ou seja, não irá assinar. O usuário receberá
-                notificações sobre o documento e terá permissão para visualiza-lo.</p>
-              
-              <div class="alert alert-warning col-md-2" role="alert">
-                <p>*Preenchimento obrigatório</p>                
-              </div>
-              <img class="img-custom" src="Imagens/Uso/cadastro-1.png">              
-
+              <!--
               <ol class="ol-custom">
                 <li class="li-custom">
                   <div class="step-content">
@@ -429,35 +419,54 @@
                   </div>
                 </li>
               </ol>
-            </section>
-
-            <hr>
-          
-            <section id="editando-assinantes">
-              <h1>Editando dados do assinante</h1>              
-              <p>Localize o registro do assinante, clique sob o registro e depois clique no botão <strong>Editar</strong>.</p>
-              <p>Os campos disponíveis para alteração serão liberados. Após a conclusão, clique em <strong>Salvar</strong>.                            
-              <img class="img-custom" src="Imagens/Uso/cadastro-2.png">
-            </section>
-
-            <hr>
-
-            <section id="removendo-assinantes">
-              <h1>Removendo o assinante</h1>              
-              <p>Localize o registro do assinante, clique sob o registro e depois clique no botão <strong>Remover</strong>.</p>
-              <p>Será exibida uma mensagem de confirmação para realizar a ação desejada.</p>
+              -->
             </section>
           
-            <hr>
+            <section id="editando-assinantes" class="manual-section">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Como editar dados do assinante</h2>
+                  <p class="card-text">
+                    Localize o registro do assinante, clique sob o registro e depois clique no botão <strong>Editar</strong>.
+                  </p>
+                  <p class="card-text">
+                    Os campos disponíveis para alteração serão liberados. Após a conclusão, clique em <strong>Salvar</strong>.                    
+                  </p>
+                  <img class="img-custom" src="Imagens/Uso/cadastro-2.png">
+                </div>
+              </div>
+            </section>
 
-            <section id="carregando-assinantes">
-              <h1>Carregando todos os assinantes</h1>              
-              <p>Por padrão, a página carrega apenas os 100 primeiros assinantes da base para garantir melhor performance. Para visualizar todos os assinantes, clique em <strong>Carregar todos os assinantes</strong>. Uma mensagem
-              de confirmação será exibida e, ao confirmar, o sistema carregará todos os registros. Esse processo pode levar alguns
-              minutos, dependendo da quantidade de dados.</p>              
+            <section id="removendo-assinantes" class="manual-section">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Como remover um assinante</h2>
+                  <p class="card-text">
+                    Localize o registro do assinante, clique sob o registro e depois clique no botão <strong>Remover</strong>.
+                  </p>
+                  <p class="card-text">
+                    Será exibida uma mensagem de confirmação para realizar a ação desejada.
+                  </p>
+                  <img class="img-custom" src="Imagens/Uso/cadastro-2.png">
+                </div>
+              </div>
+            </section>
+
+            <section id="carregando-assinantes" class="manual-section">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Carregando todos os assinantes</h2>
+                  <p class="card-text">
+                    Por padrão, a página carrega apenas os 100 primeiros assinantes da base para garantir melhor performance. Para
+                    visualizar todos os assinantes, clique em <strong>Carregar todos os assinantes</strong>. Uma mensagem
+                    de confirmação será exibida e, ao confirmar, o sistema carregará todos os registros. Esse processo pode levar alguns
+                    minutos, dependendo da quantidade de dados.
+                  </p>                  
+                </div>
+              </div>
             </section>
           
-            <hr>
+            
             <section id="importando-assinantes">
               <h1>Importando assinantes</h1>              
               <p>A opção <strong>Importar Assinantes</strong> permite informar uma planilha no formato .CSV para criação dos assinantes em lote.</p>

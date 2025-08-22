@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual do Usuário - AppDocs</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #6366f1;
+            --success-color: #10b981;
+            --info-color: #06b6d4;
+            --warning-color: #f59e0b;
+            --sidebar-width: 280px;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: var(--sidebar-width);
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            z-index: 1030;
+            padding-top: 140px;
+        }
+        
+        .sidebar-menu {
+            padding: 1rem 0;
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #374151;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .menu-item:hover {
+            background-color: #f3f4f6;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-left-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        
+        .menu-item.active {
+            background-color: #ede9fe;
+            color: var(--primary-color);
+            border-left-color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .menu-item i {
+            width: 20px;
+            margin-right: 0.75rem;
+        }
+        
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            min-height: calc(100vh - 140px);
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .icon-upload {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+        }
+        
+        .icon-share {
+            background: linear-gradient(135deg, var(--info-color), #0891b2);
+        }
+        
+        .icon-security {
+            background: linear-gradient(135deg, var(--warning-color), #d97706);
+        }
+        
+        .icon-support {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 0.75rem;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        
+        .intro-badge {
+            background: linear-gradient(135deg, var(--warning-color), #d97706);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-text {
+            background: linear-gradient(120deg, #a7f3d0 0%, #a7f3d0 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 0.2em;
+            background-position: 0 88%;
+            padding: 0.1em 0.3em;
+            font-weight: 600;
+        }
+        
+        .btn-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+            color: white;
+        }
+        
+        .welcome-section {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .welcome-icon {
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .sidebar.show {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .mobile-menu-btn {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1040;
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="btn mobile-menu-btn d-md-none" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="h2 fw-bold mb-2">
+                        <i class="fas fa-book-open me-3"></i>
+                        Manual do Usuário - AppDocs
+                    </h1>
+                    <p class="mb-0 opacity-75">Aprenda a usar as principais funcionalidades de forma simples e rápida</p>
+                </div>
+                <div class="col-md-4 text-end">
+                    <i class="fas fa-rocket" style="font-size: 3rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+            <a href="#" class="menu-item active" onclick="showSection('inicio')">
+                <i class="fas fa-home"></i>
+                Início
+            </a>
+            <a href="#" class="menu-item" onclick="showSection('upload')">
+                <i class="fas fa-cloud-upload-alt"></i>
+                Upload de Documentos
+            </a>
+            <a href="#" class="menu-item" onclick="showSection('compartilhamento')">
+                <i class="fas fa-share-alt"></i>
+                Compartilhamento
+            </a>
+            <a href="#" class="menu-item" onclick="showSection('seguranca')">
+                <i class="fas fa-shield-alt"></i>
+                Segurança
+            </a>
+            <a href="#" class="menu-item" onclick="showSection('suporte')">
+                <i class="fas fa-life-ring"></i>
+                Suporte
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Início -->
+        <div id="inicio" class="content-section active">
+            <div class="welcome-section">
+                <i class="fas fa-rocket welcome-icon"></i>
+                <h2 class="h1 fw-bold mb-4">Bem-vindo ao Manual do AppDocs!</h2>
+                <p class="lead text-muted mb-4">
+                    Este manual foi criado para ajudá-lo a aproveitar ao máximo todas as funcionalidades 
+                    da nossa plataforma. Navegue pelos tópicos no menu lateral para aprender sobre cada recurso.
+                </p>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 h-100" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-bolt text-primary mb-3" style="font-size: 2.5rem;"></i>
+                                <h5 class="fw-bold">Rápido e Fácil</h5>
+                                <p class="text-muted mb-0">Interface intuitiva para todos os níveis de usuário</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 h-100" style="background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);">
+                            <div class="card-body text-center p-4">
+                                <i class="fas fa-lock text-success mb-3" style="font-size: 2.5rem;"></i>
+                                <h5 class="fw-bold">100% Seguro</h5>
+                                <p class="text-muted mb-0">Seus documentos protegidos com criptografia avançada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload de Documentos -->
+        <div id="upload" class="content-section">
+            <div class="card feature-card">
+                <div class="card-body p-4">
+                    <div class="feature-icon icon-upload">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    
+                    <h2 class="text-center fw-bold mb-4">Upload de Documentos</h2>
+                    
+                    <div class="intro-badge">
+                        <i class="fas fa-info-circle me-2"></i>
+                        O que é esta funcionalidade?
+                    </div>
+                    
+                    <p class="text-muted mb-4">
+                        O sistema de upload permite que você <span class="highlight-text">envie seus documentos</span> 
+                        de forma segura e organizada para a plataforma. Suporta múltiplos formatos como PDF, DOC, 
+                        DOCX e imagens.
+                    </p>
+                    
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-list-ol me-2 text-primary"></i>
+                        Como utilizar:
+                    </h5>
+                    
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div>
+                                <strong>Acesse a área de Upload</strong><br>
+                                <small class="text-muted">Clique no botão "Novo Documento" na tela principal</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div>
+                                <strong>Selecione os arquivos</strong><br>
+                                <small class="text-muted">Arraste e solte ou clique para selecionar os documentos</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div>
+                                <strong>Confirme o envio</strong><br>
+                                <small class="text-muted">Verifique os arquivos e clique em "Enviar Documentos"</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button class="btn btn-custom">
+                            <i class="fas fa-play me-2"></i>
+                            Começar Upload
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compartilhamento -->
+        <div id="compartilhamento" class="content-section">
+            <div class="card feature-card">
+                <div class="card-body p-4">
+                    <div class="feature-icon icon-share">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    
+                    <h2 class="text-center fw-bold mb-4">Compartilhamento Seguro</h2>
+                    
+                    <div class="intro-badge">
+                        <i class="fas fa-info-circle me-2"></i>
+                        O que é esta funcionalidade?
+                    </div>
+                    
+                    <p class="text-muted mb-4">
+                        Permite <span class="highlight-text">compartilhar documentos</span> com outros usuários 
+                        de forma controlada, definindo permissões específicas como visualização, edição ou 
+                        download para cada pessoa.
+                    </p>
+                    
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-list-ol me-2 text-primary"></i>
+                        Como utilizar:
+                    </h5>
+                    
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div>
+                                <strong>Selecione o documento</strong><br>
+                                <small class="text-muted">Localize e clique no documento que deseja compartilhar</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div>
+                                <strong>Configure as permissões</strong><br>
+                                <small class="text-muted">Escolha o nível de acesso: visualizar, editar ou baixar</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div>
+                                <strong>Adicione destinatários</strong><br>
+                                <small class="text-muted">Digite os e-mails das pessoas e envie o convite</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button class="btn btn-custom">
+                            <i class="fas fa-share me-2"></i>
+                            Compartilhar Agora
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segurança -->
+        <div id="seguranca" class="content-section">
+            <div class="card feature-card">
+                <div class="card-body p-4">
+                    <div class="feature-icon icon-security">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    
+                    <h2 class="text-center fw-bold mb-4">Segurança e Privacidade</h2>
+                    
+                    <div class="intro-badge">
+                        <i class="fas fa-info-circle me-2"></i>
+                        O que é esta funcionalidade?
+                    </div>
+                    
+                    <p class="text-muted mb-4">
+                        Sistema de <span class="highlight-text">segurança avançada</span> que protege seus documentos 
+                        com criptografia de ponta a ponta, autenticação em duas etapas e controle de acesso granular.
+                    </p>
+                    
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-list-ol me-2 text-primary"></i>
+                        Como configurar:
+                    </h5>
+                    
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div>
+                                <strong>Ative a autenticação 2FA</strong><br>
+                                <small class="text-muted">Vá em Configurações > Segurança > Autenticação em duas etapas</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div>
+                                <strong>Configure senhas seguras</strong><br>
+                                <small class="text-muted">Use senhas com pelo menos 8 caracteres, números e símbolos</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div>
+                                <strong>Monitore atividades</strong><br>
+                                <small class="text-muted">Verifique regularmente o log de atividades da sua conta</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button class="btn btn-custom">
+                            <i class="fas fa-cog me-2"></i>
+                            Configurar Segurança
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Suporte -->
+        <div id="suporte" class="content-section">
+            <div class="card feature-card">
+                <div class="card-body p-4">
+                    <div class="feature-icon icon-support">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
+                    
+                    <h2 class="text-center fw-bold mb-4">Suporte e Ajuda</h2>
+                    
+                    <div class="intro-badge">
+                        <i class="fas fa-info-circle me-2"></i>
+                        Como obter ajuda?
+                    </div>
+                    
+                    <p class="text-muted mb-4">
+                        Nossa equipe de suporte está <span class="highlight-text">sempre disponível</span> para 
+                        ajudá-lo. Oferecemos múltiplos canais de atendimento e uma base de conhecimento completa.
+                    </p>
+                    
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-list-ol me-2 text-primary"></i>
+                        Canais de atendimento:
+                    </h5>
+                    
+                    <div class="steps-container">
+                        <div class="step-item">
+                            <div class="step-number">📞</div>
+                            <div>
+                                <strong>Telefone</strong><br>
+                                <small class="text-muted">0800 123 4567 - Atendimento 24/7</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">📧</div>
+                            <div>
+                                <strong>E-mail</strong><br>
+                                <small class="text-muted">suporte@appdocs.com - Resposta em até 2 horas</small>
+                            </div>
+                        </div>
+                        
+                        <div class="step-item">
+                            <div class="step-number">💬</div>
+                            <div>
+                                <strong>Chat ao vivo</strong><br>
+                                <small class="text-muted">Disponível no canto inferior direito da tela</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4">
+                        <button class="btn btn-custom">
+                            <i class="fas fa-comments me-2"></i>
+                            Falar com Suporte
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showSection(sectionId) {
+            // Remove active class from all sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active class from all menu items
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => item.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked menu item
+            event.target.classList.add('active');
+            
+            // Close sidebar on mobile
+            if (window.innerWidth <= 768) {
+                document.getElementById('sidebar').classList.remove('show');
+            }
+        }
+        
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+        
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const mobileBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(event.target) && 
+                !mobileBtn.contains(event.target)) {
+                sidebar.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
