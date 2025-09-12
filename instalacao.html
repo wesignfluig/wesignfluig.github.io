@@ -7,6 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
    <!--CSS -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <link href="css/headers.css" rel="stylesheet">
    <link href="css/dashboard.css" rel="stylesheet">
@@ -25,15 +26,28 @@
 
 
 <body>
-   <header class="navbar sticky-top flex-md-nowrap p-0 shadow d-flex justify-content-center py-3 bg-white">
-      <ul class="nav nav-pills">
-         <li class="nav-item"><a href="instalacao.html" class="nav-link active" aria-current="page">Instalação</a></li>
-         <li class="nav-item"><a href="configuracao.html" class="nav-link">Configuração</a></li>
-         <li class="nav-item"><a href="index.html" class="nav-link">Utilização</a></li>
-         <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-         <li class="nav-item"><a href="release-notes.html" class="nav-link">Release Notes</a></li>
-      </ul>
-   </header>
+   <div class="header-section">
+      <div class="container">
+   
+         <a href="./index.html">
+            <img fetchpriority="high" sizes="142px" src="Imagens/wesign/wesign-logo.avif" width="142" height="62">
+         </a>
+   
+         <div class="row align-items-center">
+            <div class="col-md-8">
+               <h1 class="display-4 fw-bold mb-3">
+                  Utilização do app Wesign fluig
+               </h1>
+               <p class="lead mb-0">
+                  Aprenda tudo sobre a utilização do app no TOTVS Fluig.
+               </p>
+            </div>
+            <div class="col-md-4 text-center">
+               <i class="fas fa-rocket" style="font-size: 5rem; opacity: 0.3;"></i>
+            </div>
+         </div>
+      </div>
+   </div>
 
    <div class="container-fluid">
       <div class="row">
@@ -86,192 +100,370 @@
 
          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-            <section id="requisitos">
-               <h1> Requisitos</h1>               
-               <article>
-                  <p> O app utilizará uma licença de usuário para o <a class="link-default" href="./configuracao.html#usuario-callback">Usuário do Serviço Callback</a>.                  
-                  <p> É necessário que os endereços do Portal de Assinaturas não possuam restrições de acesso pelo servidor do fluig. Acesse <a class="link-default" href="./configuracao.html#servico-externo">Serviço de Integração Portal de Assinaturas</a> 
-                  para maiores informações.
-                  </p>
-                  <p> Para realizar a instalação do app Wesign no TOTVS Fluig, é necessário a utilização de um usuário com papel de administrador. </p>               
-                  <p>O procedimento deve ser realizado pela <strong> Central de Componentes</strong>, disponível no <strong>Painel de Controle</strong>. Após o upload do componente EAR, habilite as widgets da para utilização. </p>                  
-                  <img src="Imagens/Instalação/1.png" class="img-custom"> 
-               </article>               
+            <section id="requisitos" class="manual-section">
+               <div class="card">
+                  <div class="card-body">
+                     <h2 class="card-title">Requisitos</h2>
+                     <p class="card-text"> O app utilizará uma licença de usuário para o <a class="link-default"
+                           href="./configuracao.html#usuario-callback">Usuário do Serviço Callback</a>.
+                     <p class="card-text"> É necessário que os endereços do Portal de Assinaturas não possuam restrições de acesso pelo servidor do fluig.
+                        Acesse <a class="link-default" href="./configuracao.html#servico-externo">Serviço de Integração Portal de
+                           Assinaturas</a>
+                        para maiores informações.
+                     </p>
+                     <p class="card-text"> Para realizar a instalação do app Wesign no TOTVS Fluig, é necessário a utilização de um usuário com papel de
+                        administrador. </p>
+                     <p class="card-text">O procedimento deve ser realizado pela <strong> Central de Componentes</strong>, disponível no <strong>Painel de
+                           Controle</strong>. Após o upload do componente EAR, habilite as widgets da para utilização. </p>
+                     <img src="Imagens/Instalação/1.png" class="img-custom">
+                  </div>
+               </div>             
             </section>
 
-            <hr>
+            <section id="formularios" class="manual-section">
+               <div class="card">
+                  <div class="card-body">
+                     <h2 class="card-title">Formulários</h2>
+                     <p class="card-text">Nesta estapa será criada uma pasta chamada <strong>Wesign</strong> em <b> Documentos </b>dentro da
+                        pasta raiz do TOTVS
+                        fluig. Essa pasta servirá para armazenar os formulários e todas as informações de funcionamento do aplicativo.</p>
+                     <p class="card-text">O acesso à pasta e aos formulários ficam restritos aos usuários com perfil de
+                        <strong>Administrador</strong> na plataforma.</p>
+                     <p class="card-text">Os formulários instalados são: </p>
 
-            <section id="formularios">
-               <h1> Formulários</h1>
-               <article>
-                  <p>Nesta estapa será criada uma pasta chamada <strong>Wesign</strong> em <b> Documentos </b>dentro da pasta raiz do TOTVS
-                  fluig. Essa pasta servirá para armazenar os formulários e todas as informações de funcionamento do aplicativo.</p>
-                  <p>O acesso à pasta e aos formulários ficam restritos aos usuários com perfil de <strong>Administrador</strong> na plataforma.</p>
-
-                  <p>Os formulários instalados são: </p>
-                  
-                  <ul>
-                     <li>
-                        <h4>Parâmetro gerais</h4>
-                        <p>Formulário responsável por armazenar os parâmetros de integração do app.</p>
-                        <p>Dataset do formulário: ds_wesign_param_geral</p>
-                        
-                     </li>
-                     <li>
-                        <h4>Cadastro de assinantes </h4>
-                        <p>Formulário responsável por armazenar os dados dos assinantes inseridos através da widget.</p>
-                        <p>Dataset do formulário: ds_wesign_assinantes</p>
-                     </li>                     
-                     <li>
-                        <h4>Formulário Auxiliar</h4>
-                        <p>Formulário responsável por registrar cada documento enviado
-                        para assinatura, trazendo em cada registro informações relevantes sobre o documento e essenciais para funcionamento correto do app. </p>
-                        <p>Dataset do formulário: ds_form_aux_wesign</p>                     
-                     </li>
-                     <li>
-                        <h4>Importador de dados</h4>
-                        <p>Formulário utilizado para importar os dados para a base fluig. </p>
-                        <div class="alert alert-warning col-md-4" role="alert">
-                           Sua utilização foi descontinuada à partir da versão V3.1.
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">Parâmetro Gerais (ds_wesign_param_geral)</span>
                         </div>
-                     </li>
-                  </ul>
-               </article>               
+                        <div class="field-description">
+                           Formulário responsável por armazenar os parâmetros de integração do app.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">Cadastro de Assinantes (ds_wesign_assinantes)</span>
+                        </div>
+                        <div class="field-description">
+                           Formulário responsável por armazenar os dados dos assinantes inseridos através da widget.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">Formulário Auxiliar (ds_form_aux_wesign)</span>
+                        </div>
+                        <div class="field-description">
+                           Formulário responsável por registrar cada documento enviado
+                           para assinatura, trazendo em cada registro informações relevantes sobre o documento e essenciais para
+                           funcionamento correto do app.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">Importador de dados (ds_wesign_param_geral)</span>
+                        </div>
+                        <div class="field-description">
+                           Formulário utilizado para importar os dados para a base fluig.
+                        </div>
+                     </div>                     
+                  </div>
+               </div>            
             </section>
 
-            <hr>
+            <section id="datasets" class="manual-section">
+               <div class="card">
+                  <div class="card-body">
+                     <h2 class="card-title">Datasets</h2>
+                     <p class="card-text">Nesta etapa será realizada a instalação dos datasets que farão a integração entre
+                        o TOTVS fluig e o Portal de Assinaturas.
+                     </p>
+                     <p class="card-text">Após a instalação, os datasets destacados como <strong>Sincronizado</strong> poderão ser
+                        sincronizados em <strong>Painel de Controle > Agendador de Tarefas</strong>.</p>
+                     <p class="card-text">Os datasets instalados são: </p>
 
-            <section id="datasets">
-               <h1> Datasets</h1>
-               <p>Nesta etapa será realizada a instalação dos datasets que farão a integração entre
-                  o TOTVS fluig e o Portal de Assinaturas.
-               </p>
-               <p>Após a instalação, os datasets destacados como <strong>Sincronizado</strong> poderão ser sincronizados em  <strong>Painel de Controle > Agendador de Tarefas</strong>.</p>
-               <p>Os datasets instalados são: </p>
-               <ul>
-                  <li>                     
-                     <strong>ds_auxiliar_wesign</strong>: possui lógicas para integração com o Portal de Assinaturas 
-                     e executa os webservices do TOTVS fluig para funcionamento do app na plataforma.                     
-                  </li>
-                  <li>                     
-                     <strong>ds_callback_wesign</strong>: É o dataset responsável por atualizar o status do documento/assinante
-                        e gerar o manifesto de assinaturas quando o ambiente possui o serviço <a class="link-default" href="./configuracao.html#callback">Callback</a> ativo.                     
-                  </li>
-                  <li>
-                     <strong>ds_delete_manifesto_wesign</strong>: responsável por remover o
-                     manifesto criado no GED (Documentos) após anexar ao documento original.
-                  </li>
-                  <li>
-                     <strong>ds_delete_wesign</strong>: cancela o documento no Portal de Assinaturas.                     
-                  </li>
-                  <li>                     
-                     <strong><del>ds_documents_autocomplete_wesign*</del></strong>: lista
-                     todos os arquivos
-                     disponíveis do GED (Documentos) para envio.                     
-                  </li>
-                  <li>
-                     <strong><del>ds_documents_wesign*</del></strong>: lista
-                     todos os arquivos
-                     disponíveis do GED (Documentos) para envio.                     
-                  </li>
-                  <li>                     
-                     <strong>ds_package_wesign</strong>: É o dataset responsável por atualizar o status do documento e gerar o manifesto de assinaturas. Sua lógica verifica se todos os documentos enviados nos últimos 3 meses e que estão status de <strong>Pendente</strong> foram assinados no
-                      <b>Portal de Assinaturas</b>. É executado periodicamente conforme definido em <a class="link-default" href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a>.                      
-                  </li>
-                  <li>
-                     <strong>ds_package_completo_wesign</strong>: possui o mesmo funcionamento do dataset <b>ds_package_wesign</b>, porém verifica todos os documentos com status de <strong>Pendente</strong>, independente da data de envio.
-                     Quanto mais documentos com o status de <b>Pendente</b>, maior será o tempo de execução do dataset.                     
-                  </li>
-                  <li>
-                     <strong>ds_reject_document_wesign</strong>: atualizar o status do documento para <b>Rejeitado</b>
-                        quando recebe a notificação via serviço <a class="link-default" href="./configuracao.html#callback">Callback</a>.                     
-                  </li>
-                  <li>
-                     <strong><del>ds_signers_wesign*</del></strong>: lista todos os assinantes cadastrados.                     
-                  </li>
-                  <li>
-                     <strong>ds_update_status_wesign</strong>: atualiza o status
-                     de assinatura do assinante no documento quando o ambiente possui o serviço <a class="link-default" href="./configuracao.html#callback">Callback</a> ativo.                     
-                  </li>
-                  <li>                     
-                     <strong>ds_upload_wesign_manual</strong>: É o dataset responsável por realizar o envio do documento para assinatura. É executado após
-                     cada envio de documento.                     
-                  </li>
-                  <li>
-                     <strong>ds_upload_wesign</strong>: possui o mesmo funcionamento do dataset <b>ds_upload_wesign_manual</b>, porém verifica todos os documentos com status de <strong>Enviando</strong> que não foram integrados. É executado periodicamente conforme definido em <a class="link-default"
-                        href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a>.
-                  </li>
-               </ul>
-               
-               <div class="alert alert-warning col-md-4" role="alert">
-                  *Sua utilização foi descontinuada à partir da versão V3.1.
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_auxiliar_wesign</span>
+                        </div>
+                        <div class="field-description">
+                           Possui lógicas para integração com o Portal de Assinaturas
+                           e executa os webservices do TOTVS fluig para funcionamento do app na plataforma.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_callback_wesign</span>
+                        </div>
+                        <div class="field-description">
+                           É o dataset responsável por atualizar o status do documento/assinante
+                           e gerar o manifesto de assinaturas quando o ambiente possui o serviço <a class="link-default"
+                              href="./configuracao.html#callback">Callback</a> ativo.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_delete_manifesto_wesign</span>
+                        </div>
+                        <div class="field-description">
+                           Responsável por remover o
+                           manifesto criado no GED (Documentos) após anexar ao documento original.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_delete_wesign</span>                           
+                        </div>
+                        <div class="field-description">
+                           Cancela o documento no Portal de Assinaturas.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_documents_autocomplete_wesignn</span>
+                           <span class="field-requirement required">(descontinuado)</span>
+                        </div>
+                        <div class="field-description">
+                           Lista todos os arquivos disponíveis do GED (Documentos) para envio.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_documents_wesign</span>
+                           <span class="field-requirement required">(descontinuado)</span>
+                        </div>
+                        <div class="field-description">
+                           Lista todos os arquivos disponíveis do GED (Documentos) para envio.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_package_wesign</span>
+                           <span class="field-requirement optional">(sincronizado)</span>
+                        </div>
+                        <div class="field-description">
+                           É o dataset responsável por atualizar o status do documento e gerar o manifesto de assinaturas. Sua lógica verifica se
+                           todos os documentos enviados nos últimos 3 meses e que estão status de <strong>Pendente</strong> foram assinados no
+                           <b>Portal de Assinaturas</b>. É executado periodicamente conforme definido em <a class="link-default"
+                              href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a>.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_package_completo_wesign</span>
+                           <span class="field-requirement optional">(sincronizado)</span>
+                        </div>
+                        <div class="field-description">
+                           Possui o mesmo funcionamento do dataset <b>ds_package_wesign</b>, porém verifica todos os documentos com status de
+                           <strong>Pendente</strong>, independente da data de envio.
+                           Quanto mais documentos com o status de <b>Pendente</b>, maior será o tempo de execução do dataset.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_reject_document_wesign</span>                           
+                        </div>
+                        <div class="field-description">
+                           Atualizar o status do documento para <b>Rejeitado</b>
+                           quando recebe a notificação via serviço <a class="link-default" href="./configuracao.html#callback">Callback</a>.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_signers_wesign</span>
+                           <span class="field-requirement required">(descontinuado)</span>
+                        </div>
+                        <div class="field-description">
+                           Lista todos os assinantes cadastrados.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_update_status_wesign</span>
+                        </div>
+                        <div class="field-description">
+                        atualiza o status
+                        de assinatura do assinante no documento quando o ambiente possui o serviço <a class="link-default"
+                           href="./configuracao.html#callback">Callback</a> ativo.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_upload_wesign_manual</span>
+                        </div>
+                        <div class="field-description">
+                           É o dataset responsável por realizar o envio do documento para assinatura. É executado após
+                           cada envio de documento.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ds_upload_wesign</span>
+                        </div>
+                        <div class="field-description">
+                        Possui o mesmo funcionamento do dataset <b>ds_upload_wesign_manual</b>, porém verifica todos os documentos com status de
+                        <strong>Enviando</strong> que não foram integrados. É executado periodicamente conforme definido em <a
+                           class="link-default" href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a>
+                        </div>
+                     </div>
+
+                     <i> Página "Instalação e Configuração" demonstrando datasets instalados </i>
+                     <img src="Imagens/Instalação/2.png" class="img-custom" alt="Wizard Dataset">
+                  </div>               
                </div>
+            </section>            
 
-               <i> Página "Instalação e Configuração" demonstrando datasets instalados </i>
-               <img src="Imagens/Instalação/2.png" class="img-custom" alt="Wizard Dataset">
-            </section>
+            <section id="servicos" class="manual-section">
 
-            <hr>
+               <div class="card">
+                  <div class="card-body">
+                     <h2 class="card-title">Serviços</h2>
+                     <p class="card-text">Nesta etapa será realizada a instalação dos serviços utilizados pelo app. Com exceção do serviço <b>wesigner</b>, os demais serviços são
+                        webservices da própria plataforma TOTVS fluig.</p>
+                     <p class="card-text">Os serviços instalados são: </p>
 
-            <section id="servicos">
-               <h1>Serviços</h1>
-               
-               <p>Nesta etapa será realizada a instalação dos serviços utilizados pelo app. Os serviços são webservices da própria plataforma TOTVS fluig.</p>
-               <p>Os serviços instalados são: </p>
-               <ul>
-                  <li><strong>wesigner</strong>: Webservice responsável por realizar
-                     a integração entre informações enviadas do TOTVS fluig com o Portal de Assinaturas.
-                  </li>
-                  <li><strong>ECMCardService_wesign</strong>: Webservice responsável por realizar
-                     operações referentes a formulários.
-                  </li>
-                  <li><strong>ECMCustomFieldsService_wesign</strong>: Webservice responsável por
-                     interagir com os campos customizados.
-                  </li>
-                  <li><strong>ECMDocumentService_wesign</strong>: Webservice responsável por realizar
-                     operações referentes a documentos.
-                  </li>
-                  <li><strong>ECMFolderService_wesign</strong>: Webservice responsável por realizar
-                     operações referentes a pastas.
-                  </li>
-                  <li><strong>ECMTokenService_wesign</strong>: Webservice responsável por validar
-                     o usuário e senha de integração configurados no app.
-                  </li>
-                  <li><strong><del>ECMWorkflowEngineService_wesign*</del></strong>: Webservice responsável por realizar
-                     operações referentes a workflow no fluig. Pode ser utilizado para movimentar
-                     solicitações, entre outros recursos.
-                  </li>
-               </ul>
-               
-               <div class="alert alert-warning col-md-4" role="alert">
-                  *Sua utilização foi descontinuada à partir da versão V3.1.
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">wesigner</span>
+                        </div>
+                        <div class="field-description">
+                           Webservice responsável por realizar
+                           a integração entre informações enviadas do TOTVS fluig com o Portal de Assinaturas.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ECMCardService_wesign</span>
+                        </div>
+                        <div class="field-description">
+                           Webservice responsável por realizar operações referentes a formulários.
+                        </div>
+                     </div>                     
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ECMCustomFieldsService_wesign</span>
+                           <span class="field-requirement required">(descontinuado)</span>
+                        </div>
+                        <div class="field-description">
+                           Webservice responsável por interagir com os campos customizados.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ECMDocumentService_wesign</span>
+                        </div>
+                        <div class="field-description">
+                           Webservice responsável por realizar operações referentes a documentos.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ECMFolderService_wesign</span>
+                        </div>
+                        <div class="field-description">
+                           Webservice responsável por realizar operações referentes a pastas.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ECMTokenService_wesign</span>
+                        </div>
+                        <div class="field-description">
+                           Webservice responsável por validar o usuário e senha de integração configurados no app.
+                        </div>
+                     </div>
+
+                     <div class="field-item">
+                        <div class="field-header">
+                           <span class="field-icon">🔹</span>
+                           <span class="field-name">ECMWorkflowEngineService_wesign</span>
+                           <span class="field-requirement required">(descontinuado)</span>
+                        </div>
+                        <div class="field-description">
+                           Webservice responsável por realizar operações referentes a workflow no fluig. Pode ser utilizado para movimentar
+                           solicitações, entre outros recursos.
+                        </div>
+                     </div>
+
+                     <p class="card-body">Feita a instalação, eles poderão ser encontrados em: <strong>Painel de Controle > Desenvolvimento > Serviços</strong>
+                     </p>
+                     <img src="Imagens/Instalação/3.png" class="img-custom" alt="Wizard Serviço">
+                     
+                     <img src="Imagens/Instalação/4.png" class="img-custom" alt="Wizard Serviço">
+                  </div>
                </div>
-               
-               <p>Feita a instalação, eles poderão ser encontrados em: <strong>Painel de Controle > Desenvolvimento > Serviços</strong></p>
-               <img src="Imagens/Instalação/3.png" class="img-custom" alt="Wizard Serviço">
-
-               <img src="Imagens/Instalação/4.png" class="img-custom" alt="Wizard Serviço">
-
             </section>
+            
+            <section id="campo-customizado" class="manual-section">
 
-            <hr>
-
-            <section id="campo-customizado">
-
-               <h1> Campo customizado</h1>
-               
-               <p>Nesta etapa será realizada a instalação do campo customizado que é atualizado a cada alteração de status do documento enviado para assinatura.</p>
-               <p>Feita a instalação, eles poderão ser encontrados em: <strong>Painel de Controle > Personalização > Campos customizados</strong></p>
-               <img src="Imagens/Instalação/5.png" class="img-custom" alt="Wizard Serviço">
-               <img src="Imagens/Instalação/6.png" class="img-custom" alt="Wizard Serviço">
+               <div class="card">
+                  <div class="card-body">
+                     <h2 class="card-title">Campo customizado</h2>
+                     <p class="card-text">
+                        <p class="card-text">Nesta etapa será realizada a instalação do campo customizado que é atualizado a cada alteração de
+                           status do documento enviado para assinatura.</p>
+                        <p class="card-text">Feita a instalação, eles poderão ser encontrados em: <strong>Painel de Controle > Personalização >
+                              Campos customizados</strong></p>
+                        <img src="Imagens/Instalação/5.png" class="img-custom" alt="Wizard Serviço">
+                        <img src="Imagens/Instalação/6.png" class="img-custom" alt="Wizard Serviço">               
+                     </p>
+                  </div>
+               </div>
             </section>
+            
+            <section id="atualizacao" class="manual-section">
 
-            <hr>
-
-            <section id="atualizacao">
-               <h1> Atualização</h1>
-               
-               <p>O responsável pelo contrato será notificado quando houver novas atualizações no app. Você pode acompanhar a versão atual e suas notas de atualização em <a class="link-default" href="./release-notes.html">Release Notes</a>.</p>
+               <div class="card">
+                  <div class="card-body">
+                     <h2 class="card-title">Atualização</h2>
+                     <p class="card-text">
+                        O responsável pelo contrato será notificado quando houver novas atualizações no app. Você pode
+                           acompanhar a versão atual e suas notas de atualização em <a class="link-default" href="./release-notes.html">Release
+                              Notes</a>.
+                     </p>
+                  </div>
+               </div>
             </section>
          </main>
       </div>
