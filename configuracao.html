@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!--CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/headers.css" rel="stylesheet">
   <link href="css/dashboard.css" rel="stylesheet">
@@ -23,15 +24,28 @@
 </head>
 
 <body>
-  <header class="navbar sticky-top flex-md-nowrap p-0 shadow d-flex justify-content-center py-3 bg-white">
-    <ul class="nav nav-pills">
-      <li class="nav-item"><a href="instalacao.html" class="nav-link" aria-current="page">Instalação</a></li>
-      <li class="nav-item"><a href="configuracao.html" class="nav-link active">Configuração</a></li>
-      <li class="nav-item"><a href="index.html" class="nav-link">Utilização</a></li>
-      <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
-      <li class="nav-item"><a href="release-notes.html" class="nav-link">Release Notes</a></li>
-    </ul>
-  </header>
+  <div class="header-section">
+    <div class="container">
+  
+      <a href="./index.html">
+        <img fetchpriority="high" sizes="142px" src="Imagens/wesign/wesign-logo.avif" width="142" height="62">
+      </a>
+  
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h1 class="display-4 fw-bold mb-3">
+            Manual do app Wesign fluig
+          </h1>
+          <p class="lead mb-0">
+            Aprenda tudo sobre a utilização do app no TOTVS Fluig.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="fas fa-rocket" style="font-size: 5rem; opacity: 0.3;"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="container-fluid">
     <div class="row">
@@ -83,183 +97,307 @@
 
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-        <section id="parametros">
-          <h1> Parâmetros de Integração</h1>
-          <article>
-            <p>Os parâmetros são obrigatórios na instalação a fim de definir todas as configurações iniciais
-              necessárias para
-              começar a utilizar o app. Abaixo encontra-se a descrição de cada campo.
-            </p>
-            <ul>
-              <li>
-                <strong>Token</strong>: É uma string (sequência de caracteres) única, utilizada para representar a empresa e permitir o acesso aos
-                webservices para integração no Portal de Assinaturas.                
-              </li>
-              <li>
-                <strong>Usuário de integração</strong>: Usuário com perfil de <strong>administrador</strong> responsável por realizar as integrações entre fluig e Portal
-                de Assinaturas.                
-              </li>
-              <li>
-                <strong>Senha de integração</strong>: Senha do usuário de integração.
-                <div class="alert alert-warning col-md-8" role="alert">
-                  <p>Se houver alteração de senha do usuário, é necessário informar a senha atualizada e <strong>Salvar
-                      parâmetros</strong>.</p>
-                  <p>O app não irá permitir a utilização caso a senha informada esteja incorreta ou desatualizada.</p>
+        <section id="parametros" class="manual-section">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Parâmetros de Integração</h2>
+              <p class="card-text">Os parâmetros são obrigatórios na instalação a fim de definir todas as configurações iniciais
+                necessárias para
+                começar a utilizar o app. Abaixo encontra-se a descrição de cada campo.
+              </p>
+              
+              <div class="field-item">
+                <div class="field-header">
+                  <span class="field-icon">🔹</span>
+                  <span class="field-name">Token</span>
                 </div>
-              </li>
-              <li>
-                <strong>Homologação</strong>: Marque esse campo caso o token utilizado seja do Portal de Assinaturas Homologação. Todos documentos enviados
-                para
-                a base de homologação não possuem validade jurídica.                
-              </li>
-            </ul>
-            <img src="Imagens/Configuração/1.png" class="img-custom">
-          </article>          
+                <div class="field-description">
+                  É uma string (sequência de caracteres) única, utilizada para representar a empresa e permitir o acesso aos
+                  webservices para integração no Portal de Assinaturas.
+                </div>
+              </div>
+              
+              <div class="field-item">
+                <div class="field-header">
+                  <span class="field-icon">🔹</span>
+                  <span class="field-name">Usuário de integração</span>
+                </div>
+                <div class="field-description">
+                  Usuário com perfil de <strong>administrador</strong> responsável por realizar as integrações entre fluig e Portal
+                  de Assinaturas.
+                </div>
+              </div>
+              
+              <div class="field-item">
+                <div class="field-header">
+                  <span class="field-icon">🔹</span>
+                  <span class="field-name">Senha de integração</span>
+                </div>
+                <div class="field-description">
+                  Senha do usuário de integração.
+                </div>
+              </div>
+              
+              <div class="field-item">
+                <div class="field-header">
+                  <span class="field-icon">🔹</span>
+                  <span class="field-name">Homologação</span>
+                </div>
+                <div class="field-description">
+                  Marque esse campo caso o token utilizado seja do Portal de Assinaturas Homologação. Todos documentos enviados
+                  para
+                  a base de homologação não possuem validade jurídica.
+                </div>
+              </div>
+              
+              <img src="Imagens/Configuração/1.png" class="img-custom">
+              
+              <div class="warning-section">
+                <h3 class="section-title warning">
+                  <i class="fa-solid fa-triangle-exclamation icon"></i>
+                  Observação Importante
+                </h3>
+              
+                <p class="warning-text">Se houver alteração de senha do usuário, é necessário informar a senha atualizada e
+                  <strong>Salvar
+                    parâmetros</strong>.</p>
+                <p class="warning-text">O app não irá permitir a utilização caso a senha informada esteja incorreta ou desatualizada.
+                </p>
+                </p>
+              </div>
+          
+              </p>
+            </div>
+          </div>         
         </section>
 
-        <hr>
+        <section id="servico-externo" class="manual-section">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Serviço de Integração Portal de Assinaturas</h2>
+              <p class="card-text">Ao clicar em <strong>Salvar parâmetros</strong>, será criado o serviço
+                <strong>wesigner</strong> em <strong>Painel de Controle > Serviços</strong>.
+              </p>
+              <p class="card-text">Este serviço é responsável por realizar as integrações entre o TOTVS fluig e o Portal de
+                Assinaturas.</p>
+              <p class="card-text">Os endereços abaixo devem ser liberados no servidor de aplicação do TOTVS fluig para que as
+                integrações sejam
+                realizadas:
+              <p class="card-text"><a href="https://assinatura.homologwesign.com.br">https://assinatura.homologwesign.com.br</a> - Endereço do Portal de Assinaturas
+                Homologação</p>
+              <p class="card-text"><a href="https://portal.wesign.com.br">https://portal.wesign.com.br</a> - Endereço do Portal de Assinaturas Produção</p>
+            </div>
+          </div>
 
-        <section id="servico-externo">
-          <h1> Serviço de Integração Portal de Assinaturas </h1>
-          <article>
-            <p>Ao clicar em <strong>Salvar parâmetros</strong>, será criado o serviço
-              <strong>wesigner</strong> em <strong>Painel de Controle > Serviços</strong>.
-            </p>
-            <p>Este serviço é responsável por realizar as integrações entre o TOTVS fluig e o Portal de Assinaturas.</p>
-            <p>Os endereços abaixo devem ser liberados no servidor de aplicação do TOTVS fluig para que as integrações sejam
-              realizadas:
-            <p><strong>https://assinatura.homologwesign.com.br</strong> - Endereço do Portal de Assinaturas Homologação</p>
-            <p><strong>https://portal.wesign.com.br</strong> - Endereço do Portal de Assinaturas Produção</p>
-          </article>
         </section>
 
-        <hr>
+        <section id="callback" class="manual-section">
 
-        <section id="callback">
-          <h1> Serviço Callback </h1>
-          <article>
-            <p>
-              O <b>Callback</b> é um serviço que avisa automaticamente seu TOTVS fluig quando acontece alguma ação no documento, como a assinatura
-              de um participante. Ele ajuda a manter as informações do documento sempre atualizadas em tempo real. 
-              Ou seja, assim que o documento é assinado, o Portal de Assinaturas envia um aviso para que o status dessa assinatura seja
-              atualizado na hora no TOTVS fluig.
-            </p>
-            <p>Para seu funcionamento, é necessário que o endereço do TOTVS fluig público, ou seja, não necessite de acesso à uma VPN. </p>
-            <p>Se o servidor de aplicação do TOTVS fluig possui regras de acesso, é necessário que os endereços de IP abaixo sejam liberados.
-            Estes são os endereços de IP que os servidores do Portal de Assinaturas utilizará para enviar as notificações ao TOTVS fluig:
-            </p>
-            <p><strong>Produção</strong></p>
-            <p>
-              104.41.15.44,104.41.14.184,104.41.13.132,104.41.12.97,20.201.81.246,104.41.56.229,104.41.30.250,
-              20.206.191.81,191.235.52.58,191.235.52.65,191.235.52.78,191.235.52.195,191.235.52.245,191.235.53.35,
-              191.235.53.57,191.235.53.74,191.235.53.158,191.235.54.48,191.235.54.59,104.41.13.179
-            </p>
-            <p><strong>Homologação</strong></p>
-            <p>
-              191.235.41.23,191.235.42.102,191.235.43.227,191.235.44.10,191.235.44.21,191.235.44.195,20.206.225.71,
-              191.235.57.182,191.235.60.212,20.226.162.193,20.226.162.236,20.226.163.21,20.226.163.71,20.226.163.144,
-              20.226.163.231,20.226.164.12,20.226.164.22,20.226.165.196,20.226.165.221,20.226.165.232,20.226.166.183,
-              20.226.167.46,20.226.163.69,20.226.167.66,20.226.167.68,20.226.167.129,20.226.167.172,20.226.167.223,
-              20.226.167.244,20.226.167.247,20.206.176.5
-            </p>
-
-            <p>Se o seu ambiente não utilizar o <strong>Callback</strong> ou por algum motivo o serviço de Callback não notificar o TOTVS fluig,
-              os dados dos documentos serão atualizados através do dataset <strong>ds_package_wesign</strong>. 
-              Acesse <a class="link-default" href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a> para maiores informações.
-            </p>
-            <img src="Imagens/Configuração/2.jpg" class="img-custom">
-          </article>          
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Serviço Callback</h2>
+              <p class="card-text">
+                O <b>Callback</b> é um serviço que avisa automaticamente seu TOTVS fluig quando acontece alguma ação no documento,
+                como a assinatura
+                de um participante. Ele ajuda a manter as informações do documento sempre atualizadas em tempo real.
+                Ou seja, assim que o documento é assinado, o Portal de Assinaturas envia um aviso para que o status dessa assinatura
+                seja
+                atualizado na hora no TOTVS fluig.
+              </p>
+              <p class="card-text">Para seu funcionamento, é necessário que o endereço do TOTVS fluig público, ou seja, não necessite
+                de acesso à uma VPN. </p>
+              <p class="card-text">Se o servidor de aplicação do TOTVS fluig possui regras de acesso, é necessário que os endereços de
+                IP abaixo sejam liberados.
+                Estes são os endereços de IP que os servidores do Portal de Assinaturas utilizará para enviar as notificações ao TOTVS
+                fluig:
+              </p>
+              <p class="card-text"><strong>Produção</strong></p>
+              <p>
+                104.41.15.44,104.41.14.184,104.41.13.132,104.41.12.97,20.201.81.246,104.41.56.229,104.41.30.250,
+                20.206.191.81,191.235.52.58,191.235.52.65,191.235.52.78,191.235.52.195,191.235.52.245,191.235.53.35,
+                191.235.53.57,191.235.53.74,191.235.53.158,191.235.54.48,191.235.54.59,104.41.13.179
+              </p>
+              <p class="card-text"><strong>Homologação</strong></p>
+              <p>
+                191.235.41.23,191.235.42.102,191.235.43.227,191.235.44.10,191.235.44.21,191.235.44.195,20.206.225.71,
+                191.235.57.182,191.235.60.212,20.226.162.193,20.226.162.236,20.226.163.21,20.226.163.71,20.226.163.144,
+                20.226.163.231,20.226.164.12,20.226.164.22,20.226.165.196,20.226.165.221,20.226.165.232,20.226.166.183,
+                20.226.167.46,20.226.163.69,20.226.167.66,20.226.167.68,20.226.167.129,20.226.167.172,20.226.167.223,
+                20.226.167.244,20.226.167.247,20.206.176.5
+              </p>
+              
+              <p class="card-text">Se o seu ambiente não utilizar o <strong>Callback</strong> ou por algum motivo o serviço de
+                Callback não notificar o TOTVS fluig,
+                os dados dos documentos serão atualizados através do dataset <strong>ds_package_wesign</strong>.
+                Acesse <a class="link-default" href="./configuracao.html#datasets-sincronizados">Datasets sincronizados</a> para
+                maiores informações.
+              </p>
+              <img src="Imagens/Configuração/2.jpg" class="img-custom">
+            </div>
+          </div>         
         </section>
 
-        <hr>
+        <section id="usuario-callback" class="manual-section">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Usuário do Serviço Callback</h2>
+              <p class="card-text">Após a ativação do app Wesign na <strong>Central de Componentes</strong>, será criado um usuário
+                chamado
+                <strong>integration-1234-5678-9876-5432-X (X = código da empresa do fluig)</strong>
+                no TOTVS fluig.
+              </p>
+              <p class="card-text">Ele é responsável por realizar as operações de atualização de dados do documento quando o serviço
+                Callback é
+                acionado pelo Portal de Assinaturas.</p>
+              <p class="card-text">Para que o Callback funcione corretamente, é necessário incluir esse usuário no papel
+                <strong>admin</strong>.
+              </p>
+              <p class="card-text">
+                Acesse a documentação da TOTVS para maiores informações: <a href="https://bit.ly/2SEW4bz">Como expor dados em
+                  ambientes
+                  públicos</a>
+              </p>
+              <img src="Imagens/Configuração/wizard-param6.png" class="img-custom" alt="">
+            </div>
+          </div>
+        </section>     
 
-        <section id="usuario-callback">
-          <h1> Usuário do Serviço Callback </h1>
-          <article>
-        
-            <p>Após a ativação do app Wesign na <strong>Central de Componentes</strong>, será criado um usuário chamado
-              <strong>integration-1234-5678-9876-5432-X (X = código da empresa do fluig)</strong>
-              no TOTVS fluig.
-            </p>
-            <p>Ele é responsável por realizar as operações de atualização de dados do documento quando o serviço Callback é
-              acionado pelo Portal de Assinaturas.</p>
-            <p>Para que o Callback funcione corretamente, é necessário incluir esse usuário no papel
-              <strong>admin</strong>.
-            </p>
-            <p>
-              Acesse a documentação da TOTVS para maiores informações: <a href="https://bit.ly/2SEW4bz">Como expor dados em
-                ambientes
-                públicos</a>
-            </p>
-          </article>
-        
-          <img src="Imagens/Configuração/wizard-param6.png" class="img-custom" alt="">
-        </section>
+        <section id="datasets-sincronizados" class="manual-section">
 
-        <hr>        
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Datasets sincronizados</h2>
+              <p class="card-text">Se o seu ambiente não utilizar o <strong>Callback</strong> ou por algum motivo o serviço de
+                Callback não notificar o
+                TOTVS fluig,
+                os dados dos documentos serão atualizados através do dataset <strong>ds_package_wesign</strong>.
+              </p>
+              <p class="card-text"> Após a instalação do app, é recomendado que o dataset seja configurado para executar de forma
+                sincronizado em um determinado intervalo
+                de tempo que pode ser configurado conforme sua preferência.
+              </p>
+              
+              <p class="card-text">Os datasets que podem ser sincronizados são:</p>
 
-        <section id="datasets-sincronizados">
-          <h1> Datasets sincronizados </h1>
-          <article>
-            <p>Se o seu ambiente não utilizar o <strong>Callback</strong> ou por algum motivo o serviço de Callback não notificar o
-              TOTVS fluig,
-              os dados dos documentos serão atualizados através do dataset <strong>ds_package_wesign</strong>.
-            </p>   
-            <p> Após a instalação do app, é recomendado que o dataset seja configurado para executar de forma sincronizado em um determinado intervalo
-              de tempo que pode ser configurado conforme sua preferência.
-            </p>   
+              <div class="field-item">
+                <div class="field-header">
+                  <span class="field-icon">🔹</span>
+                  <span class="field-name">ds_upload_wesign</span>
+                </div>
+                <div class="field-description">
+                  Verifica todos os documentos com status de <strong>Enviando</strong> que não
+                  foram integrados
+                  e tentar integrar novamente.
+                </div>
 
-            <p>Os datasets que podem ser sincronizados são:</p>
-            <ul>
-              <li>
-                <strong>ds_upload_wesign</strong>: Verifica todos os documentos com status de <strong>Enviando</strong> que não foram integrados
-                e tentar integrar novamente.
-                <div class="alert alert-warning col-md-8" role="alert">
-                  <p>Este dataset irá verificar todos os documentos que não foram integrados e estão com status de <strong>Enviando</strong>.
-                  e tentará integrar novamente com o Portal de Assinaturas.</p>   
-                  <p>Certifique-se sobre a necessidade de deixar esse dataset sincronizado para sua execução, uma vez que o remetente do documento
-                    ao não integrar (envio 1), pode realizar um novo envio e neste novo envio o documento ser integrado corretamente (envio 2), ficando o outro documento (envio 1)
+                <div class="warning-section">
+                  <p class="warning-text">Este dataset irá verificar todos os documentos que não foram integrados e estão com status de
+                    <strong>Enviando</strong>.
+                    e tentará integrar novamente com o Portal de Assinaturas.
+                  </p>
+                  <p class="warning-text">Certifique-se sobre a necessidade de deixar esse dataset sincronizado para sua execução, uma vez que o
+                    remetente do documento
+                    ao não integrar (envio 1), pode realizar um novo envio e neste novo envio o documento ser integrado corretamente
+                    (envio 2), ficando o outro documento (envio 1)
                     com status de <strong>Enviando</strong>. </p>
-                  <p>Quando o dataset for executado, ele tentará realizar a integração (envio 1) e isso pode causar "duplicidade" e gastos de créditos para um 
-                    documento que já foi integrado em outro envio (envio 2).                    
-                  </p>                                 
+                  <p class="warning-text">Quando o dataset for executado, ele tentará realizar a integração (envio 1) e isso pode causar "duplicidade" e
+                    gastos de créditos para um
+                    documento que já foi integrado em outro envio (envio 2).
+                  </p>
                 </div>
-              </li>
-              <li>
-                <strong>ds_package_wesign</strong>: É o dataset responsável por atualizar o status do documento e gerar o manifesto de
-                assinaturas. Sua lógica verifica se todos os documentos enviados nos últimos 3 meses e que estão status de
-                <strong>Pendente</strong> foram assinados no
-                <b>Portal de Assinaturas</b>.
-              </li>
-              <li>
-                <strong>ds_package_completo_wesign</strong>: possui o mesmo funcionamento do dataset <b>ds_package_wesign</b>, porém
-                verifica todos os documentos com status de <strong>Pendente</strong>, independente da data de envio.
-                Quanto mais documentos com o status de <b>Pendente</b>, maior será o tempo de execução do dataset.
-              </li>
-            </ul>
-            
-            <p>Para configurar o agendamento do dataset, siga os passos abaixo. Para maiores informações, acesse <a target="_blank" class="link-default"
-                href="https://tdn.totvs.com/pages/releaseview.action?pageId=234455387">Agendador de Tarefas</a>.</p>
+              </div>
 
-            <ol>
-              <li>Acesse o <strong>Painel de Controle</strong></li>
-              <li>Acesse o <strong>Agendador de tarefas</strong></li>
-              <li>Clique em <strong>Adicionar</strong></li>
-              <li>Insira uma descrição e selecione a opção <strong>Sincronização de dataset</strong></li>
-              <img style="width: 400px;" src="Imagens/Configuração/config-agendador1.png" class="img-custom" alt="">
-              <li>Em <strong>Datasets</strong>, procure pelo dataset desejado</li>
-              <li>Selecione a frequência de execução e clique em <strong>Confirmar</strong>.</li>              
-            </ol>
-          </article>          
+              <div class="field-item">
+                <div class="field-header">
+                  <span class="field-icon">🔹</span>
+                  <span class="field-name">ds_package_wesign</span>
+                </div>
+                <div class="field-description">
+                  É o dataset responsável por atualizar o status do documento e gerar o manifesto
+                  de
+                  assinaturas. Sua lógica verifica se todos os documentos enviados nos últimos 3 meses e que estão status de
+                  <strong>Pendente</strong> foram assinados no
+                  <b>Portal de Assinaturas</b>.
+                </div>
+              </div>
+
+              <div class="field-item">
+                <div class="field-header">
+                  <span class="field-icon">🔹</span>
+                  <span class="field-name">ds_package_completo_wesign</span>
+                </div>
+                <div class="field-description">
+                  Possui o mesmo funcionamento do dataset <b>ds_package_wesign</b>, porém
+                  verifica todos os documentos com status de <strong>Pendente</strong>, independente da data de envio.
+                  Quanto mais documentos com o status de <b>Pendente</b>, maior será o tempo de execução do dataset.
+                </div>
+              </div>
+
+              
+              <p class="card-text">
+                Para configurar o agendamento do dataset, siga os passos abaixo. Para maiores informações, acesse
+                <a target="_blank" class="link-default" href="https://tdn.totvs.com/pages/releaseview.action?pageId=234455387">Agendador
+                  de Tarefas</a>.
+              </p>              
+              
+              <div class="steps-container">
+                <div class="step-item">
+                  <div class="step-number">1</div>                  
+                  <p class="card-text">Acesse o <strong>Painel de Controle</strong></p>                  
+                </div>
+              
+                <div class="step-item">
+                  <div class="step-number">2</div>                  
+                  <p class="card-text">Acesse o <strong>Agendador de tarefas</strong></p>                  
+                </div>
+              
+                <div class="step-item">
+                  <div class="step-number">3</div>
+                  <p class="card-text">
+                    Clique em <strong>Adicionar</strong>
+                  </p>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-number">4</div>
+                  <p class="card-text">
+                    Insira uma descrição e selecione a opção <strong>Sincronização de dataset</strong>
+                  </p>                                    
+                </div>                
+
+                <div class="step-item">
+                  <div class="step-number">5</div>
+                  <p class="card-text">
+                    Em <strong>Datasets</strong>, procure pelo dataset desejado
+                  </p>
+                </div>
+
+                <div class="step-item">
+                  <div class="step-number">6</div>
+                  <p class="card-text">
+                    Selecione a frequência de execução e clique em <strong>Confirmar</strong>.
+                  </p>
+                </div>
+
+                <img style="width: 400px;" src="Imagens/Configuração/config-agendador1.png" class="img-custom" alt="">                
+              </div>
+            </div>
+          </div>         
         </section>
 
-        <hr>
-        <section id="fluxo-processo">
-          <h1> Integração com fluxo de processo </h1>
-          <article>
-            <p>É possível realizar uma integração entre um fluxo de processo com o app Wesign para realizar o envio de documentos de forma customizada.</p>
-            <p>Entre em contato com o <b>Suporte Wesign</b> para obter o código-fonte do fluxo de processo e formulário com as integrações. </p>
-          </article>          
+        <section id="fluxo-processo" class="manual-section">
+
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title">Integração com fluxo de processo</h2>
+              <article>
+                <p class="card-text">É possível realizar uma integração entre um fluxo de processo com o app Wesign para realizar o
+                  envio de documentos de forma customizada.</p>
+                <p class="card-text">Entre em contato com o <b>Suporte Wesign</b> - <a href="mailto:suportewesign@wesign.com.br">suportewesign@wesign.com.br</a> para obter o código-fonte do fluxo de processo e
+                  formulário com as integrações. </p>
+              </article>
+            </div>
+          </div>                   
         </section>
       </main>
     </div>
