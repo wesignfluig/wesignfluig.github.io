@@ -238,7 +238,7 @@ body {
     
     background: linear-gradient(135deg, #252B42 0%, #1C555E 100%);
     color: white;
-    padding: 3rem 0;
+    padding: 1rem 0;
     margin-bottom: 2rem;
     /*
     --bg-gradient: linear-gradient(90deg, #252B42 0%, #1C555E 100%);
@@ -344,4 +344,33 @@ body {
 .btn-custom:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+.item-wesign {
+    color: white;
+    padding-right: 50px;
+    padding: 8px;
+    border: 0 solid #ccc;
+    border-radius: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: rgba(247, 247, 247, 0);
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+.item-fonte {
+    color: white !important;
+    font-weight: 600;
+}
+
+.active.item-fonte {
+    text-decoration-line: underline
 }
