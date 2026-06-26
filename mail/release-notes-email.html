@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Release Notes - Atualizações do Sistema</title>
+</head>
+<body style="margin:0; padding:0; background-color:#f4f5f7; font-family: Arial, Helvetica, sans-serif;">
+
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f4f5f7; padding:30px 0;">
+    <tr>
+      <td align="center">
+
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background-color:#ffffff; border-radius:8px; overflow:hidden; box-shadow:0 1px 4px rgba(0,0,0,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="background-color:#2563eb; padding:32px 40px; text-align:center;">
+              <h1 style="color:#ffffff; margin:0; font-size:24px;">Novidades no WeSign Fluig</h1>
+              <p style="color:#dbeafe; margin:8px 0 0; font-size:14px;">Confira as últimas atualizações do aplicativo para Fluig</p>
+            </td>
+          </tr>
+
+          <!-- Saudação -->
+          <tr>
+            <td style="padding:32px 40px 0;">
+              <p style="font-size:16px; color:#1f2937; margin:0 0 16px;">Olá, <strong>[Nome do Cliente]</strong>,</p>
+              <p style="font-size:15px; color:#374151; line-height:1.6; margin:0 0 24px;">
+                Além de prezar pelo constante aprimoramento do nosso serviço, consideramos importante lhe manter informado sobre as atualizações de todos os benefícios proporcionados pela nosso aplicativo <b> WeSign Fluig</b>.
+                <br>                
+              </p>
+            </td>
+          </tr>
+
+          <!-- Novas funcionalidades -->
+          <tr>
+            <td style="padding:0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#f0fdf4; border-left:4px solid #22c55e; border-radius:6px; margin-bottom:20px;">
+                <tr>
+                  <td style="padding:16px 20px;">
+                    <p style="margin:0 0 8px; font-size:15px; font-weight:bold; color:#166534;">Novas funcionalidades</p>                    
+                    <p><strong>Inclusão de anexos no documento para assinatura</strong><br>
+                    Agora é possível incluir anexos ao enviar um documento para assinatura eletrônica.</p>
+                    <ul>
+                      <li>O remetente pode definir se deseja anexar documentos de apoio e classificá-los como <strong>Públicos</strong> ou <strong>Privados</strong>.</li>
+                      <li>Os anexos não são assinados e devem ser utilizados apenas para complementar ou contextualizar o documento principal.</li>
+                      <li>Anexos privados ficam disponíveis apenas para participantes pertencentes à organização (cadastrados no Portal WeSign).</li>
+                    </ul>
+                    
+                    <p><strong>Reenvio de documentos com status Enviando</strong><br>
+                      O remetente do documento (ou um administrador do Fluig) pode realizar uma nova tentativa de envio diretamente pelo <b>Quadro de Status</b> quando ocorrer alguma falha na integração com o Portal WeSign.</p>
+
+                    <p><strong>Atualização do status dos assinantes</strong><br>
+                    Também pelo <b>Quadro de Status</b>, o remetente (ou administrador do Fluig) pode sincronizar as informações dos assinantes com o Portal WeSign.</p>
+
+                    <p><strong>Novo dataset para tratamento de eventos (Callback)</strong><br>
+                    Foi disponibilizado o dataset <b>ds_callback_customizado_wesign</b>, com código-fonte aberto para customizações. O dataset recebe todas as notificações do serviço de Callback, incluindo:</p>
+                    <ul>
+                      <li>Documento Concluído;</li>
+                      <li>Documento Recusado;</li>
+                      <li>Documento Aprovado;</li>
+                      <li>Documento Assinado.</li>
+                    </ul>
+                    <p>Com isso, é possível implementar customizações em fluxo de processos que integram com o app WeSign, como movimentar uma solicitação após a assinatura de um documento.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Melhorias -->
+          <tr>
+            <td style="padding:0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#eff6ff; border-left:4px solid #3b82f6; border-radius:6px; margin-bottom:20px;">
+                <tr>
+                  <td style="padding:16px 20px;">
+                    <p style="margin:0 0 8px; font-size:15px; font-weight:bold; color:#1d4ed8;">Melhorias</p>
+                    <p>
+                      <b>Atualização do dataset ds_package_wesign</b>
+                      <br>
+                      O dataset passa a consultar apenas documentos:
+                      <ul>
+                        <li>Enviados nos últimos <b>3 meses</b>;</li>
+                        <li>Com status <b>Pendente</b>;</li>
+                        <li>Ordenados do mais recente para o mais antigo.</li>
+                      </ul>
+
+                      Para consultar documentos em períodos diferentes, utilize o formulário <b>Utilitários WeSign (antigo Importador de Dados)</b>.
+                    </p>
+                    <p>
+                      <b>Atualização do dataset ds_upload_wesign</b>
+                      <br>
+                       O reenvio de documentos para integração passa a ser realizado exclusivamente pelo formulário <b>Utilitários WeSign</b>, onde o administrador informa o período desejado para processamento.
+                       Além disso:
+                      <ul>
+                        <li>A sincronização automática foi desativada;</li>
+                        <li>A execução agendada do dataset foi removida.</li>
+                      </ul>
+
+                      Com essa alteração, os usuários podem localizar documentos com falha de integração no <b>Quadro de Status</b> e realizar uma nova tentativa de envio de forma mais simples.
+                    </p>
+                    <p>
+                      <b>Atualização do formulário e processo customizado</b>
+                      <br>
+                       O código-fonte do formulário e do processo customizado de integração com o app WeSign Fluig foi atualizado para:
+                      <ul>
+                        <li>Suportar a inclusão de anexos no envio para assinatura;</li>
+                        <li>Modernizar o layout do formulário, mantendo o mesmo funcionamento já conhecido pelos usuários.</li>
+                      </ul>                      
+                    </p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Correções -->
+          <tr>
+            <td style="padding:0 40px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#fef2f2; border-left:4px solid #ef4444; border-radius:6px; margin-bottom:24px;">
+                <tr>
+                  <td style="padding:16px 20px;">
+                    <p style="margin:0 0 8px; font-size:15px; font-weight:bold; color:#b91c1c;">🐛 Correções</p>
+                    <ul style="margin:0; padding-left:18px; color:#374151; font-size:14px; line-height:1.6;">
+                      <li>[Liste bugs corrigidos, se aplicável]</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- CTA -->
+          <tr>
+            <td style="padding:0 40px 32px; text-align:center;">
+              <a href="#" style="display:inline-block; background-color:#2563eb; color:#ffffff; text-decoration:none; font-size:15px; font-weight:bold; padding:14px 32px; border-radius:6px;">
+                Acessar o Sistema
+              </a>
+            </td>
+          </tr>
+
+          <!-- Mensagem final -->
+          <tr>
+            <td style="padding:0 40px 32px;">
+              <p style="font-size:14px; color:#6b7280; line-height:1.6; margin:0 0 8px;">
+                Essas atualizações já estão disponíveis e podem ser acessadas diretamente na sua conta, sem necessidade de qualquer ação adicional.
+              </p>
+              <p style="font-size:14px; color:#6b7280; line-height:1.6; margin:0;">
+                Caso tenha dúvidas, nossa equipe está à disposição pelo e-mail
+                <a href="mailto:suporte@empresa.com" style="color:#2563eb;">suporte@empresa.com</a>
+                ou pelo telefone <strong>[telefone de contato]</strong>.
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color:#f9fafb; padding:24px 40px; text-align:center; border-top:1px solid #e5e7eb;">
+              <p style="font-size:13px; color:#9ca3af; margin:0 0 4px;">
+                Atenciosamente, <strong>Equipe [Nome da Empresa]</strong>
+              </p>
+              <p style="font-size:12px; color:#9ca3af; margin:0;">
+                Você está recebendo este e-mail porque é cliente do [Nome do Sistema].
+              </p>
+            </td>
+          </tr>
+
+        </table>
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
